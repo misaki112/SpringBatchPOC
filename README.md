@@ -400,7 +400,7 @@ So when restart, the data which have been read but not processed and written are
 **Solution:**  
 - Instead of multi-threading, use Spring Batch's [**Partition**](https://docs.spring.io/spring-batch/4.1.x/reference/html/scalability.html#partitioning) for scaling.  
 Partitioning separate chunks of **master step** into individual **slave steps**.   
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2Fpartitioning-overview.png&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/partitioning-overview.png)
 
 - Store information about the **startIndex and endIndex** of each chunk into **batch step execution context** table.   
 Use ```@Value``` annotation to retrieve the information from execution context in the reader so that reader will know which row to start and stop.  
@@ -408,17 +408,17 @@ Use ```@Value``` annotation to retrieve the information from execution context i
 **Example:**    
 - The step **loadReferenceTable** here is reading from a csv file with 895 rows.  
 - Use partitioning with gridSize = 10 (10 threads), each thread read and write around 90 rows.  
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FpartitioningExample.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/partitioningExample.PNG)
 
 - In **Step Execution Context**, information about which chunk of data each thread is processing is shown.  
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FstepExecutionContext.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/stepExecutionContext.PNG)
 
 **Result:**  
 - When restarting, only **failed slave step** inside the master step is executed. Only the failed chunk will be read, process and write.
 - With partitioning, since each thread deal with **not overlapping** chunks, occurrence of deadlock problem reduced.  
 - Partitioning is especially good for large data and has higher efficiency and **less concurrency limitation** than multi-threadings.  
 - VisualVM Overview with Partitioning gridSize = 10 (10 threads)
-  ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FpartitioningSequential.PNG&version=GBmaster&contentOnly=true&__v=5)
+  ![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/partitioningSequential.PNG)
 - Both using 10 threads, with same amount of data, partitioning takes 3 min 23 sec which is shorter than 3 min 42 sec of using both multi-threading and parallel steps.
 
 ## **Part 4: Use Spring Cloud Data Flow to Manage Existing Batch Jobs**
@@ -467,10 +467,10 @@ The default port Spring Cloud Data Flow uses on local machine is **http://localh
 
 ### Register Batch Job to Spring Cloud Data Flow
 Open dashboard after connection, choose Apps on menu and click on **Add Application(s)** button  
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FaddApp.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/addApp.PNG)
 
 Choose **Register one or more applications**, fill in **name** for the application and select **Task** as **type**.  
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2Fregisterapp.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/registerapp.PNG)
 
 For **URI**, enter the path of the location of the JAR file created by Maven build.  
 For example, ```file://D:/spring-batch-poc/POC_SpringBatch/webServicePractice/target/webServicePractice-0.0.1-SNAPSHOT.jar```
@@ -479,34 +479,34 @@ Click on **Register the application(s)** when done. As result, the application w
 
 ### Launch Instance of Batch Job
 After registering  the batch job as application, go to **Tasks** on the menu, click **Create task(s)**
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FcreateTask.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/createTask.PNG)
 
 Choose task from the drop down menu and drag it into the graph, connect **START** and **END** node to it and click **Create Task** to name the task instance.
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FcreateTask2.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/createTask2.PNG)
 
 Click the **Run** button of the application to be launched. Fill in Arguments and Parameters if needed (optional), then click **Launch the task**.
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FrunTask.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/runTask.PNG)
 
 After task finish, information about execution can be found on **Executions** page.
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2Fexecutionpage.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/executionPage.PNG)
 
 If the batch job generates log file, in the command line connection to Spring Cloud Data Flow, the directory the log file is in can be found.
 
 ### Getting Information About a Launched Task
 After the task is finished, the status of the task can be found on the **Jobs** page.
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FjobPage.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/jobPage.PNG)
 
 Click on the task, a list of the task's properties can be found.
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FTaskProp.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/TaskProp.PNG)
 
 Step detail information can be found when scroll down the page.
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FstepDetails.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/stepDetails.PNG)
 
 If the job instance fails, the exact step which cause the failure can be found. 
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FfailSstep.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/failSstep.PNG)
 
 Clicking into that step, error causing the failure will be shown.
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FfailDetail.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/failDetail.PNG)
 
 **Conclusion:**  
 - With **Spring Cloud Data Flow**, after adding annotation to **pre-existing** Spring Batch jobs, we can manage batch process easily.
@@ -533,7 +533,7 @@ Clicking into that step, error causing the failure will be shown.
 - Apply both parallel steps and multi-threading in each step with throttleLimit = 5.
 
 **Summary of Hotel Import Application:**  
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FvisualvmOverview.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/visualvmOverview.PNG)
 
 **Analysis:**  
 - From the graph, the batch job has a heavy use of the CPU at around 100% at the same time when the batch process has the maximum number of thread running.  
@@ -544,7 +544,7 @@ tables. The 10 chunk-oriented steps are split into 5 thread each since throttleL
 - The maximum heap size of the batch process is 735MB and the maximum heap used is 529MB which is small.
 
 **Change ThrottleLimit = 2, Summary of Hotel Import Application:**
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2Flimit2overview.PNG&version=GBmaster&contentOnly=true&__v=5)  
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/limit2overview.PNG)  
 
 **Analysis:**   
 - Comparing to the graph for throttleLimit = 5, the maximum CPU usage decrease from 100% to 79%.
@@ -667,9 +667,7 @@ If ***No JUnit test found*** error pop out when trying to run tests.
 
 **Spring Batch Guiding Page: https://spring.io/projects/spring-batch**
 
-**Git Repository for this POC: https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/Source/Source%20Team/_git/POC_SpringBatch?path=%2F&version=GBmaster&_a=contents**
-
 **VisualVM Home: https://visualvm.github.io/**
 
-**Presentation PowerPoint:** [**Download here**](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/Source/Source%20Team/_git/POC_SpringBatch?path=%2Fimages%2FSpringBatchPOC%20-%20Copy.pptx&version=GBmaster&_a=contents) 
+**Presentation PowerPoint:** [**Download here**](https://github.com/misaki112/SpringBatchPOC/blob/master/images/SpringBatchPOC%20-%20Copy.pptx) 
   
