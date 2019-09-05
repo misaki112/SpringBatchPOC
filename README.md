@@ -64,6 +64,9 @@ Here we use ***chunk-oriented step*** pattern, each data importing step consists
 - [**2. Spring Batch Scaling for Large Data Set**](#Part-2-Working-with-Larger-Data-Set-and-Scaling-Batch-Process)
 - [**3. Error Recovery of Batch Process with Spring Batch**](#Part-3-Improve-Error-Recovery-of-Batch-Process)
 - [**4. Manage Batch Application with Spring Cloud Data Flow**](#Part-4-Use-Spring-Cloud-Data-Flow-to-Manage-Existing-Batch-Jobs)
+- [**5. Monitor Batch Application with VisualVM**](#Part-5-Monitoring-Metrics-of-Batch-Process-Using-VisualVM)
+- [**6. Unit Testing for Spring Batch Application**](#Part-6-Unit-Test-for-Spring-Batch)
+- [**7. Resources and Links**](#Resources-and-Links)
 
 ## **Part 1. Read, process and write data using Spring Batch**
 ### Requirements
@@ -560,7 +563,7 @@ tables. The 10 chunk-oriented steps are split into 5 thread each since throttleL
 **Conclusion:**
 - The more threads we have, the more percentage of the CPU will be used. Efficiency decreased when CPU too heavily used.  
 
-## **Part 6: Unit Test for Spring Batch**
+## **Part 6. Unit Test for Spring Batch**
 See [**this page**](https://docs.spring.io/spring-batch/4.0.x/reference/html/testing.html) about general information for testing Spring Batch applications  
 
 ### 1. Testing Step Components
