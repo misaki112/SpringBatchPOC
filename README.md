@@ -60,7 +60,10 @@ Here we use ***chunk-oriented step*** pattern, each data importing step consists
 ![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/arcflow.PNG)
 
 ### **Page Guide**
-[**Spring Batch Large Data Set Scaling**](#Part-2-Working-with-Larger-Data-Set-and-Scaling-Batch-Process)
+- [**1. Read, process and write data using Spring Batch**](#Part-1-Read-process-and-write-data-using-Spring-Batch)
+- [**2. Spring Batch Scaling for Large Data Set**](#Part-2-Working-with-Larger-Data-Set-and-Scaling-Batch-Process)
+- [**3. Error Recovery of Batch Process with Spring Batch**](#Part-3-Improve-Error-Recovery-of-Batch-Process)
+- [**4. Manage Batch Application with Spring Cloud Data Flow**](#Part-4-Use-Spring-Cloud-Data-Flow-to-Manage-Existing-Batch-Jobs)
 
 ## **Part 1. Read, process and write data using Spring Batch**
 ### Requirements
