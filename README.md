@@ -1,4 +1,5 @@
-# **Introduction**
+# Spring Batch Data Importing POC
+## **Introduction**
 This POC proves Spring Batch's capability to 
 1. Read from **multiple data sources** such as csv files and web services 
 2. Write to databases such as MySQL 
@@ -228,25 +229,19 @@ See [**this page**](https://docs.spring.io/spring-batch/4.1.x/reference/html/sca
 **Flow Split** is a Spring Batch built-in property which enables parallel steps using [**FlowBuilder**](https://docs.spring.io/spring-batch/trunk/apidocs/org/springframework/batch/core/job/builder/FlowBuilder.SplitBuilder.html)
 
 After Flow Split, the application executes in the following way
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FBlank+Diagram.png&version=GBmaster&contentOnly=true&__v=5)
 
 - Total Time: 5 min 48 sec
 
 - VisualVM Overview 
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FlargePara.PNG&version=GBmaster&contentOnly=true&__v=5)  
 
 - Step Details on Spring Cloud Data Flow
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2Fparastep.PNG&version=GBmaster&contentOnly=true&__v=5)  
 
 **Conclusion:**  
-
 - Parallel steps enable a processor to switch between threads executing different steps.  
-
 - Execution process of steps overlaps, total time needed decreases.
-
 - The total running time is depending on the step which takes longest time in the parallel steps.
 
 #### 3. Multi-threading using TaskExecutor
@@ -259,17 +254,13 @@ A **single step** is executed with multiple threads after configuring.
 - Total Time: 3 min 59 sec
 
 - VisualVM Overview
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FmultiLarge.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 - Step Details on Spring Cloud Data Flow
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FmultiStep.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 **Conclusion:**  
-
 - Multi-threading speeds up the batch process by speeding up execution of each step.
-
 - The total running time is the sum of time taken for each step.
 
 #### 4. Combining Parallel Steps and Multi-threadings
@@ -279,45 +270,33 @@ With throttleLimit = 10, also run the steps in parallel way
 - Total Time: 3 min 42 sec
 
 - VisualVM Overview
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FbothLarge.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 - Step Details on Spring Cloud Data Flow
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FbothSteps.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 **Conclusion:**
-
-- Both scaling methods are using one process to switch between threads, speeding up is not as obvious as applying each method to sequential process separately.
-
+- Both scaling methods are using one process to switch between threads, speeding up is not as obvious as applying each method to sequential process separately
 - Since there are more threads than before, CPU usage and memory usage increases.
 
 ### Conclusion
 #### By applying Spring Batch's built-in scaling methods to existing batch process, the execution time can be reduced by more than 50% of the sequential execution time.
 
----
-
 ## **Part 3. Improve Error Recovery of Batch Process**
 #### **Scenario:**
 - There are **deadlock** and **lock waiting timeout** exception occur when running the batch job by multi-threading and **errors appear randomly**.
-
 - There can be **connection error** when calling **web service** due to **unstable network connection** which can be fixed by just wait and try later.   
-
 - We have large data and it takes **too long to restart the whole job** from the first step every time we want to re-run a failed job.
 
 #### **Problem 1: Database Lock Problems when Writing in Multiple Threads**
 **Analysis:**  
 - The deadlock appears even when the SQL queries only have ```INSERT``` instruction in them. The lock is a write-write lock.
-
 - Run ```SHOW ENGINE INNODB STATUS``` in MySQL shell, get information about the deadlock. The lock type is [**Insertion Intention Lock**](https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html#innodb-insert-intention-locks) which is a special kind of [**Gap Lock**](https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html#innodb-gap-locks).
-
 - **Gap Lock** appears when multiple threads are writing to the same row at the same time and can not be avoid because it is keeps the database synchronized and prevents **Phantom Read**.
 
 **Solution:**  
 - Notice that **Gap Lock** created when multiple thread writing to the same row at the same time. 
-
 - So when a thread encounters **deadlock** caused by gap lock, use **try catch retry pattern** to catch deadlock exception and retry after 0.5 second so 2 threads not writing to same row at the same time.
-
 - Set a maxTries number to prevent infinite loop.
 
     ***Try Catch Retry Patter in Customized Writer Extending JdbcBatchItemWritern***
@@ -345,13 +324,10 @@ With throttleLimit = 10, also run the steps in parallel way
 #### **Problem 2: Web Service Connection Problem Due to Unstable Connection**
 **Analysis:**  
 - The reading process from web service may fail due to unstable connection.
-
 - Retry reading from web service to avoid job failure due to random web service disconnection.
 
 **Solution:**  
-
 - Spring Batch has built-in [**Retry**](https://docs.spring.io/spring-batch/4.1.x/reference/html/retry.html) function which can restart a step on certain failure.
-
 - Use ```@Retryable``` annotation for the **read method** inside the web service response reader.
 
     ```
@@ -363,9 +339,7 @@ With throttleLimit = 10, also run the steps in parallel way
 #### **Problem 3: Restart a Job at the Step of Failure**
 **Analysis:**  
 - A **FAILED** job can be restart as a new job instance at the step where the last job instance failed if passing in **same job parameters**.
-
 - Currently using a Spring Batch's built-in [**RunIdIncrementer**](https://docs.spring.io/spring-batch/trunk/apidocs/org/springframework/batch/core/launch/support/RunIdIncrementer.html) to keep job parameter (runId) different for each job instance to **prevent restarting job** that has been executed.
-
 - **RunIdIncrementer** is a special [**JobParametersIncrementer**](https://docs.spring.io/spring-batch/trunk/reference/htmlsingle/#JobParametersIncrementer) and is implemented in the following way.
     ```
     public class SampleIncrementer implements JobParametersIncrementer {
@@ -382,9 +356,7 @@ With throttleLimit = 10, also run the steps in parallel way
 
 **Solution:**    
 - Use a customized **RunIdIncrementer** which will only increase runId when last execution of job instance has ExitCode of **COMPLETED** or **UNKNOWN**.
-
 - Use **JdbcTemplate** to query for the **ExitCode of last job instance** from **Meta-Data** of the batch process to decide whether increase runId or not.
-
 - Implementation of CustomizeIncrementer: 
     ```
     public class CustomizeIncrementer implements JobParametersIncrementer {
@@ -431,7 +403,6 @@ So when restart, the data which have been read but not processed and written are
 **Solution:**  
 - Instead of multi-threading, use Spring Batch's [**Partition**](https://docs.spring.io/spring-batch/4.1.x/reference/html/scalability.html#partitioning) for scaling.  
 Partitioning separate chunks of **master step** into individual **slave steps**.   
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2Fpartitioning-overview.png&version=GBmaster&contentOnly=true&__v=5)
 
 - Store information about the **startIndex and endIndex** of each chunk into **batch step execution context** table.   
@@ -439,31 +410,19 @@ Use ```@Value``` annotation to retrieve the information from execution context i
 
 **Example:**    
 - The step **loadReferenceTable** here is reading from a csv file with 895 rows.  
-
 - Use partitioning with gridSize = 10 (10 threads), each thread read and write around 90 rows.  
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FpartitioningExample.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 - In **Step Execution Context**, information about which chunk of data each thread is processing is shown.  
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FstepExecutionContext.PNG&version=GBmaster&contentOnly=true&__v=5)
-
 
 **Result:**  
 - When restarting, only **failed slave step** inside the master step is executed. Only the failed chunk will be read, process and write.
-
 - With partitioning, since each thread deal with **not overlapping** chunks, occurrence of deadlock problem reduced.  
-
 - Partitioning is especially good for large data and has higher efficiency and **less concurrency limitation** than multi-threadings.  
-
 - VisualVM Overview with Partitioning gridSize = 10 (10 threads)
-
   ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FpartitioningSequential.PNG&version=GBmaster&contentOnly=true&__v=5)
-
 - Both using 10 threads, with same amount of data, partitioning takes 3 min 23 sec which is shorter than 3 min 42 sec of using both multi-threading and parallel steps.
-
-
----
 
 ## **Part 4: Use Spring Cloud Data Flow to Manage Existing Batch Jobs**
 ### **What is Spring Cloud Data Flow?**
@@ -476,7 +435,6 @@ Spring Cloud Data Flow provides a nice UI dashboard which can **create applicati
 ### Reconfigure Existing Spring Batch Job
 #### 1. Make application callable from Spring Cloud Data Flow
 - In the main class of the batch job, add ```@EnableTask``` annotation.  
-
 - This class-level annotation tells Spring Cloud Task to bootstrap its functionality.   
 It enables a ```TaskConfigurer``` that registers the application in a ```TaskRepository```.  
 
@@ -489,15 +447,12 @@ It enables a ```TaskConfigurer``` that registers the application in a ```TaskRep
 #### 1. Get jar files for Spring Cloud Data Flow Server 
 - Run Spring Cloud Data Flow on local machine for simplicity. Since vm2012 does not support Docker,   
 see instruction on [**this page**](https://dataflow.spring.io/docs/installation/local/manual/) to get Spring Cloud Data Flow Server and shell and run them locally. (Spring Cloud Skipper is optional)
-
 - Or go to [**git repository of Spring Cloud Data Flow**](https://github.com/spring-cloud/spring-cloud-dataflow), pull source code. Import projects to IDE,   
 configure database inside IDE and run main class in project **spring-cloud-dataflow-server** as Spring-Boot application
 
 #### 2. Run Spring Cloud Data Flow Server with correct database configuration  
 - The database used by Spring Cloud Data Flow should be the same as the database being used in the batch job.    
-
-- Spring Cloud Data Flow's default database is H2. In the batch process built before, MySQL is used so here configure database to MySQL.   
-
+- Spring Cloud Data Flow's default database is H2. In the batch process built before, MySQL is used so here configure database to MySQL. 
 - Run jar file with command line with following parameters to connect Spring Cloud Data Flow to MySQL database.
 
 ```
@@ -515,11 +470,9 @@ The default port Spring Cloud Data Flow uses on local machine is **http://localh
 
 ### Register Batch Job to Spring Cloud Data Flow
 Open dashboard after connection, choose Apps on menu and click on **Add Application(s)** button  
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FaddApp.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 Choose **Register one or more applications**, fill in **name** for the application and select **Task** as **type**.  
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2Fregisterapp.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 For **URI**, enter the path of the location of the JAR file created by Maven build.  
@@ -529,112 +482,80 @@ Click on **Register the application(s)** when done. As result, the application w
 
 ### Launch Instance of Batch Job
 After registering  the batch job as application, go to **Tasks** on the menu, click **Create task(s)**
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FcreateTask.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 Choose task from the drop down menu and drag it into the graph, connect **START** and **END** node to it and click **Create Task** to name the task instance.
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FcreateTask2.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 Click the **Run** button of the application to be launched. Fill in Arguments and Parameters if needed (optional), then click **Launch the task**.
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FrunTask.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 After task finish, information about execution can be found on **Executions** page.
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2Fexecutionpage.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 If the batch job generates log file, in the command line connection to Spring Cloud Data Flow, the directory the log file is in can be found.
 
 ### Getting Information About a Launched Task
 After the task is finished, the status of the task can be found on the **Jobs** page.
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FjobPage.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 Click on the task, a list of the task's properties can be found.
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FTaskProp.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 Step detail information can be found when scroll down the page.
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FstepDetails.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 If the job instance fails, the exact step which cause the failure can be found. 
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FfailSstep.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 Clicking into that step, error causing the failure will be shown.
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FfailDetail.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 **Conclusion:**  
 - With **Spring Cloud Data Flow**, after adding annotation to **pre-existing** Spring Batch jobs, we can manage batch process easily.
 
 **Note:**   
-- As long as **Spring Cloud Data Flow** is connected to the database the batch process is using, information about a certain instance of the batch job **will be shown**   
-even if we **did not register** the application and launch it locally rather than on Spring Cloud Data Flow. 
-
+- As long as **Spring Cloud Data Flow** is connected to the database the batch process is using, information about a certain instance of the batch job **will be shown** even if we **did not register** the application and launch it locally rather than on Spring Cloud Data Flow. 
 - In that case, the job will be shown as **No Task Definition**.
-
----
 
 
 ## **Part 5. Monitoring Metrics of Batch Process Using VisualVM**
 **Scenario:**  
-
 - By using Spring Cloud Data Flow, we have access to properties of a batch job such as start time, end time and exit code.  
-
 - But we do not have access to other metrics such as **memory usage** and **thread number** of the batch job.  
 
 **Difficulty:**  
-
 - Spring Batch's built-in metric accessor can only access properties such as start time, end time which we can already get in Spring Cloud Data Flow.  
 
 **Solution:**  
-
 - Use Java Profiler Tool, [**VisualVM**](https://visualvm.github.io/) to monitor the metrics of the batch process application.  
-
 - See [**this page**](https://blog.idrsolutions.com/2013/05/setting-up-visualvm-in-under-5-minutes/) for setting up VisualVM and connect it to Eclipse.
 
 ### **Analyzing Hotel Import Batch Job with VisualVM Experiment:**  
-
 - Use the application of importing Hilton, Hyatt, Fairmont from Derby response and Hyatt, Fairmont from csv Files in **part 1.2**.
-
 - Apply both parallel steps and multi-threading in each step with throttleLimit = 5.
 
 **Summary of Hotel Import Application:**  
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FvisualvmOverview.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 **Analysis:**  
-
 - From the graph, the batch job has a heavy use of the CPU at around 100% at the same time when the batch process has the maximum number of thread running.  
-
 - As the process goes, some steps in the batch job finishes earlier and the threads decrease which also makes the usage of CPU decrease.
-
 - For thread numbers, the maximum threads running together is 57 and total threads generated is 147.  
 The batch job has 23 steps, in which 10 are chunk-oriented for reading and writing data and 13 are tasklet for cleaning  existing database  
 tables. The 10 chunk-oriented steps are split into 5 thread each since throttleLimit is 5. 
-
 - The maximum heap size of the batch process is 735MB and the maximum heap used is 529MB which is small.
 
 **Change ThrottleLimit = 2, Summary of Hotel Import Application:**
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2Flimit2overview.PNG&version=GBmaster&contentOnly=true&__v=5)  
 
 **Analysis:**   
-
 - Comparing to the graph for throttleLimit = 5, the maximum CPU usage decrease from 100% to 79%.
-
 - The maximum threads running at the same time and the total threads generated also decrease.
-
 - Total time of batch job speed up by 1 second.
 
 **Conclusion:**
-
 - The more threads we have, the more percentage of the CPU will be used. Efficiency decreased when CPU too heavily used.  
-
----
 
 ## **Part 6: Unit Test for Spring Batch**
 See [**this page**](https://docs.spring.io/spring-batch/4.0.x/reference/html/testing.html) about general information for testing Spring Batch applications  
@@ -645,7 +566,6 @@ See [**this page**](https://docs.spring.io/spring-batch/4.0.x/reference/html/tes
 
 **Difficulty:**     
 - Each component of a Spring Batch step is only run inside the scope of that step.   
-
 - We will need to mock the environment of the step scope and input for the components.
 
 **Solution:**
@@ -659,10 +579,8 @@ to the front of out test, the environment of executing that certain step will be
 ### 2. Testing a Step  
 **Scenario:**  
 - After we test each component of a step, we want to test that step to see if theses components work together in a correct way.   
-
 **Solution:**  
 - Spring Batch provides us [**JobLauncherTestUtils**](https://docs.spring.io/spring-batch/trunk/apidocs/org/springframework/batch/test/JobLauncherTestUtils.html) to launch a step independently when testing.     
-
 - First we use ```@Autowired``` to generate the JobLauncherTestUtils that has the same configuration as our batch job, then we can use     
 ```JobExecution jobExecution = jobLauncherTestUtils.launchStep(name_of_the_step);```   
 to run the step inside the test
@@ -673,18 +591,14 @@ to run the step inside the test
 to see if there is any dependency, concurrency and order issues between steps.
 
 **Solution:**    
-
 There are 2 ways to do it:     
-
 1. When we download the package from Spring Initializr, a test class is generate for us and it is an end-to-end test of the whole application.
-
 2. We can use **JobLauncherTestUtils** and launch the whole job by running   
 ```JobExecution jobExecution = jobLauncherTestUtils.launchJob();```
 
 ### 4. Mocking Calling Web Service in Unit Tests
 **Scenario:**
 - We want to test the readers reading from web service response in unit tests
-
 - During tests, we do not want the real web service to be hit so we need to mock web service inside java  
 
 **Solution:**
@@ -737,24 +651,14 @@ public class ReaderTest extends TestCase {
 ### Conclusion:
 Spring Batch offers us a lot of feature for testing batch applications without using any mocking plug-ins such as Mokitos which we will need to use in other cases.    
 
-
 #### PS:  
 If ***No JUnit test found*** error pop out when trying to run tests.   
-
 1. First check **run configuration** of the test class to see if JUnit4 is being used  
-
 2. Then check if the test file is inside **Build Path** of the project.   
-
 3. If still doesn't work after checking the above, add ```extends TestCase``` to the end when declaring the test classes.  
-
-
----
-
 
 # **Conclusion**
 ### Spring Batch can load HOBE content from multiple input sources to SQL database and make batch process easy to scale, reconfigure, restart, manage and monitor
-
----
 
 # **Resources and Links**  
 
@@ -772,6 +676,3 @@ If ***No JUnit test found*** error pop out when trying to run tests.
 
 **Presentation PowerPoint:** [**Download here**](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/Source/Source%20Team/_git/POC_SpringBatch?path=%2Fimages%2FSpringBatchPOC%20-%20Copy.pptx&version=GBmaster&_a=contents) 
   
-
-
-# SpringBatchDataImportPOC
