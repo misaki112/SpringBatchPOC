@@ -57,7 +57,7 @@ Here we use ***chunk-oriented step*** pattern, each data importing step consists
 |web service response|Generate soap response Json files from WSDL response by calling JDC|MySQL Database|  
 
 ### **Architecture**  
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2Farcflow.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/arcflow.PNG)
 
 ## **Part 1: Read, process and write data using Spring Batch**
 ### Requirements
@@ -84,8 +84,7 @@ Use [**Spring Initializr**](https://start.spring.io/) for quick generating a pro
 ### 2. Load Data from CSV Files to MySQL Database
 
 **Assumption:**  
-- Given [**csv files**](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/Source/Source%20Team/_git/POC_SpringBatch?path=%2FSpring-Batch-HOBE-POC-final-version%2Fsrc%2Fmain%2Fresources&version=GBmaster&_a=contents) representing data about hotels.The csv files used are generated from SQLServer database   
-with connection to **AOLBkg-DEV.dev.costcotravel.com** through querying. 
+- Given [**csv files**](https://github.com/misaki112/SpringBatchPOC/tree/master/Spring-Batch-HOBE-POC-final-version/src/main/resources) representing data about hotels.The csv files used are generated from SQLServer database with connection to **AOLBkg-DEV.dev.costcotravel.com** through querying. 
 
 **Difficulty:**   
 - We want to write data in one row from input csv file into multiple tables in output SQL database.
@@ -99,7 +98,7 @@ with connection to **AOLBkg-DEV.dev.costcotravel.com** through querying.
 
 **Data flow chart for batch process**
 
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FcsvReadingBatchProcess.png&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/csvReadingBatchProcess.png)
 
 **Conclusion:**  
 - Spring Batch is capable for reading data from multiple csv files and load them into one database.
@@ -129,7 +128,7 @@ of the wsdl files returned by the web service.
 (Json file generated from wsdl files by using [**xml to json converter**](https://codebeautify.org/xmltojson))
 - Use SOAP UI's **Mock REST Service** to mimic the response of calling a REST API for simplicity.   
 (Generate classes maps exactly the returning json file's structure by using [**JSON to Java Code Generator**](https://www.site24x7.com/tools/json-to-java.html) and adding missing classes manually)
-- See [**here**](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/Source/Source%20Team/_git/POC_SpringBatch?path=%2FSpring-Batch-HOBE-POC-final-version%2Fsrc%2Fmain%2Fresources%2FREST_json_reponse&version=GBmaster&_a=contents) for json files using as response of the REST api.
+- See [**here**](https://github.com/misaki112/SpringBatchPOC/tree/master/Spring-Batch-HOBE-POC-final-version/src/main/resources/REST_json_reponse) for json files using as response of the REST api.
 - See [**this page**](https://shire.corp.costcotravel.com/display/ITKB/8.+SoapUI+Installation) and [**this page**](https://shire.corp.costcotravel.com/display/ITKB/SoapUI+Introduction) for instruction about SoapUI.
 
 **Difficulty:**  
@@ -143,8 +142,7 @@ We are more likely to write same field of different hotels rather than different
 - For Writers, customize them to resemble the nested structure of the object by letting the **outer level writer trigger inner level writers** after writing output.
 
 **Data flow chart for batch process**
-
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FDerbyBatchProcess.png&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/DerbyBatchProcess.png)
 
 **Conclusion:**  
 - Spring Batch is capable for reading data from multiple REST services and load them into one database. 
@@ -178,8 +176,7 @@ And some tables can be replaced by adding entry to parent tables.
 
 **Solution:**  
 - Reconfigured the HOBE Content in the following way.
-
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2F_Blank+ERD+%26+Data+Flow.png&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/_Blank%20ERD%20_%20Data%20Flow.png)
 - Map Derby feature code to feature ID in our system.   
 - Use a reference table to access feature type instead of using mapping tables.
 
@@ -200,7 +197,7 @@ See [**this page**](https://docs.spring.io/spring-batch/4.1.x/reference/html/sca
 
 ### Spring Batch Scaling Experiment with Multi-threads
 #### Introduction
-- Use all the hotel data we have by connecting to **AOLBkg-DEV.dev.costcotravel.com** and query for [**csv files**](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/Source/Source%20Team/_git/POC_SpringBatch?path=%2Flarge-file-reading%2Fsrc%2Fmain%2Fresources&version=GBmaster&_a=contents).
+- Use all the hotel data we have by connecting to **AOLBkg-DEV.dev.costcotravel.com** and query for [**csv files**](https://github.com/misaki112/SpringBatchPOC/tree/master/Spring-Batch-HOBE-POC-final-version/src/main/resources).
 
 - In total there are    
 8265 **hotels**,   
@@ -221,23 +218,23 @@ See [**this page**](https://docs.spring.io/spring-batch/4.1.x/reference/html/sca
 #### 1. Sequential Step Execution Without Scaling
 - Total Time: 8 min 15 sec
 - VisualVM Overview 
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FlargeSeq.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/largeSeq.PNG)
 - Step Details on Spring Cloud Data Flow
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FstepSeq.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/stepSeq.PNG)
 
 #### 2. Parallel Steps with Flow Split
 **Flow Split** is a Spring Batch built-in property which enables parallel steps using [**FlowBuilder**](https://docs.spring.io/spring-batch/trunk/apidocs/org/springframework/batch/core/job/builder/FlowBuilder.SplitBuilder.html)
 
 After Flow Split, the application executes in the following way
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FBlank+Diagram.png&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/Blank%20Diagram.png)
 
 - Total Time: 5 min 48 sec
 
 - VisualVM Overview 
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FlargePara.PNG&version=GBmaster&contentOnly=true&__v=5)  
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/largePara.PNG)  
 
 - Step Details on Spring Cloud Data Flow
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2Fparastep.PNG&version=GBmaster&contentOnly=true&__v=5)  
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/parastep.PNG)  
 
 **Conclusion:**  
 - Parallel steps enable a processor to switch between threads executing different steps.  
@@ -254,10 +251,10 @@ A **single step** is executed with multiple threads after configuring.
 - Total Time: 3 min 59 sec
 
 - VisualVM Overview
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FmultiLarge.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/multiLarge.PNG)
 
 - Step Details on Spring Cloud Data Flow
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FmultiStep.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/multiStep.PNG)
 
 **Conclusion:**  
 - Multi-threading speeds up the batch process by speeding up execution of each step.
@@ -270,10 +267,10 @@ With throttleLimit = 10, also run the steps in parallel way
 - Total Time: 3 min 42 sec
 
 - VisualVM Overview
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FbothLarge.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/bothLarge.PNG)
 
 - Step Details on Spring Cloud Data Flow
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FbothSteps.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/bothSteps.PNG)
 
 **Conclusion:**
 - Both scaling methods are using one process to switch between threads, speeding up is not as obvious as applying each method to sequential process separately
