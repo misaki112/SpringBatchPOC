@@ -21,10 +21,8 @@ We want to load data from multiple sources provided by different vendors in an e
 Spring Batch offers features below which solves the problems above,  
 - Provides well defined **pattern** for batch process and **built-in** readers and writers   
 which we can use out of the box and make implementation easier, business logic clearer. 
-- Generate **META-DATA table** with metrics, such as execution time and exit status, of job and step executions which   
-**enables monitoring** the batch process
-- Provides Batch **management tool Spring Cloud Data Flow** which can be easily wired together with **exist** Spring Batch Jobs   
-and has a UI dashboard for reading information from META-DATA tables generated during batch process.
+- Generate **META-DATA table** with metrics, such as execution time and exit status, of job and step executions which **enables monitoring** the batch process
+- Provides Batch **management tool Spring Cloud Data Flow** which can be easily wired together with **exist** Spring Batch Jobs and has a UI dashboard for reading information from META-DATA tables generated during batch process.
 - Batch process can be sped up by using built-in features such as **multi-threading, parallel steps and partitioning**.   
 More scaling methods such as remote chunking can be configured using Spring Integration.
 
@@ -60,9 +58,6 @@ Here we use ***chunk-oriented step*** pattern, each data importing step consists
 ### **Architecture**  
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2Farcflow.PNG&version=GBmaster&contentOnly=true&__v=5)
 
----
-
-
 ## **Part 1: Read, process and write data using Spring Batch**
 ### Requirements
 - IDE, Eclipse or Spring Tool Suite(STS)
@@ -70,11 +65,10 @@ Here we use ***chunk-oriented step*** pattern, each data importing step consists
 - Maven 3.2+
 - MySQL 8.0 **(When installing, set authentication to old one which support Spring Cloud Data Flow)**
 
-
 ### 1. Get Project with Required Dependencies from Spring Initializr
 Use [**Spring Initializr**](https://start.spring.io/) for quick generating a project with correct structure and required dependencies in pom.xml file for Maven build.  
 
-- Choose Java version and search for dependencies needed to add.  
+- Choose Java version and search for dependencies needed to add. 
 
 |Dependency|Usage|   
 |----------|-----|
@@ -84,7 +78,6 @@ Use [**Spring Initializr**](https://start.spring.io/) for quick generating a pro
 |**Task**| Using Spring Cloud Data Flow|    
 
 - When finished, click **Generate the project** to get jar file.  
-
 - Unzip the project jar file and import into IDE as existing Maven project.  
 
 ### 2. Load Data from CSV Files to MySQL Database
@@ -95,16 +88,12 @@ with connection to **AOLBkg-DEV.dev.costcotravel.com** through querying.
 
 **Difficulty:**   
 - We want to write data in one row from input csv file into multiple tables in output SQL database.
-
 - Spring Batch's chunk-oriented step has one-to-one relationship with reader, processor and writer.
-
 - Spring Batch's reader, processor and writer cannot take inputs of different classes or return outputs of different classes.
 
 **Solution:**  
 - Create **intermediate row Object** to represent a whole row of data **while reading and processing**.   
-
 - **Split data** from a **single row object** when mapping java object fields to columns in SQL tables, write them separately into different tables using different [**JdbcBatchItemWriter**](https://docs.spring.io/spring-batch/4.1.x/api/org/springframework/batch/item/database/JdbcBatchItemWriter.html)s in the writing process,   
-
 - Combine multiple Writers to one [**CompositeItemWriter**](https://docs.spring.io/spring-batch/4.1.x/api/org/springframework/batch/item/support/CompositeItemWriter.html) to follow  Spring Batch's **one-to-one** relationship between **Step, Reader, Processor and Writer**.
 
 **Data flow chart for batch process**
@@ -118,7 +107,6 @@ with connection to **AOLBkg-DEV.dev.costcotravel.com** through querying.
 
 **Restriction:**  
 - Load data given by calling web service into POJO using **only** feature in Spring Batch.  
-
 - Avoid using manager classes from ***cwctravel.Core*** to **lower dependency** of the batch process. 
 
 **Attempt1:**  
@@ -138,25 +126,19 @@ of the wsdl files returned by the web service.
 **Assumption:**  
 - Get back a **json file** representing all information about hotels from REST API.   
 (Json file generated from wsdl files by using [**xml to json converter**](https://codebeautify.org/xmltojson))
-
 - Use SOAP UI's **Mock REST Service** to mimic the response of calling a REST API for simplicity.   
 (Generate classes maps exactly the returning json file's structure by using [**JSON to Java Code Generator**](https://www.site24x7.com/tools/json-to-java.html) and adding missing classes manually)
-
 - See [**here**](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/Source/Source%20Team/_git/POC_SpringBatch?path=%2FSpring-Batch-HOBE-POC-final-version%2Fsrc%2Fmain%2Fresources%2FREST_json_reponse&version=GBmaster&_a=contents) for json files using as response of the REST api.
-
 - See [**this page**](https://shire.corp.costcotravel.com/display/ITKB/8.+SoapUI+Installation) and [**this page**](https://shire.corp.costcotravel.com/display/ITKB/SoapUI+Introduction) for instruction about SoapUI.
 
 **Difficulty:**  
 - Json Object for hotel has **nested structure** which is different from Spring Batch's feature for Reader, Writer and Processor that only take/return one type of object as input/output.   
-
 - This makes it hard to let the batch job write to **all tables** about **one single hotel at one pass**.   
 We are more likely to write same field of different hotels rather than different fields of the same hotel at a time following Spring Batch's step logic.
-
 - But we prefer hotel **Object oriented** step rather than hotel **field oriented** step because it is easier to see which hotel has wrong data if error occurs.
 
 **Solution:**  
 - Let Reader take the most outer level object(Hotel) as input, Processor process that object **as a whole**.   
-
 - For Writers, customize them to resemble the nested structure of the object by letting the **outer level writer trigger inner level writers** after writing output.
 
 **Data flow chart for batch process**
@@ -171,8 +153,7 @@ We are more likely to write same field of different hotels rather than different
 - Simply combining the two existing csv reading and web service reading file. Reconfigure the Batch Job to execute them sequentially.
 
 **Conclusion:**  
-- Spring Batch is capable for reading data from multiple sources including csv files and web services and load data into one database.    
-
+- Spring Batch is capable for reading data from multiple sources including csv files and web services and load data into one database.   
 - We can see Spring Batch makes the batch process easy to reconfigure and build. We build a multiple sources data importing process simply by combining 2 existing process.
 
 ## **Part 1.1. Versioning Data Written to Database**
@@ -183,13 +164,12 @@ So we need to avoid repeating primary keys in tables and keep track of where the
 
 **Solution:**  
 - Add ```Source``` column to tables to keep track of source of a piece of data, "csvFile" or "Derby"  
-
 - Use MySQL query ```INSERT INTO ... ON DUPLICATE KEY UPDATE...``` to avoid repeated primary keys in ipm_hotel table
 
 **Conclusion:**   
 - Spring Batch is capable for reading data from multiple sources including csv files and web services and load data into one database even if data from different sources has overlap. 
 
-## **Part 1.2. Reconfigure Database Structure **
+## **Part 1.2. Reconfigure Database Structure**
 
 **Scenario:**  
 - When reading from Derby web service response, found that a lot of data is not used in current database structure.  
@@ -200,28 +180,19 @@ And some tables can be replaced by adding entry to parent tables.
 
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2F_Blank+ERD+%26+Data+Flow.png&version=GBmaster&contentOnly=true&__v=5)
 - Map Derby feature code to feature ID in our system.   
-
 - Use a reference table to access feature type instead of using mapping tables.
 
 **Result:**
 - Data stored in a more **uniform and compact** way and reduce number of queries needed for data access.
 
-
----
-
 ## **Part 2. Working with Larger Data Set and Scaling Batch Process**
 **Scenario:**  
-
 - The data set used in previous parts are small with only around 100 hotel entries for proof of concept.  
-
 - To see how Spring Batch performs with data of size closer to production, we need a larger data set and do scaling experiment on batch process.
 
 #### Generally, there are 2 ways to scale a Spring batch job.   
-
 1. Run batch job in a **multi-threading** way by using Spring Batch's built-in [**TaskExecutor**](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/core/task/TaskExecutor.html).
-
 2. Run batch job in a **multi-processing** way by using [**Spring Integration**](https://spring.io/projects/spring-integration).
-
 See [**this page**](https://docs.spring.io/spring-batch/4.1.x/reference/html/scalability.html) for more information on scaling Spring Batch process.
 
 ***In this POC, we use Spring Batch's built in feature for scaling without using Spring Integration***
@@ -248,13 +219,9 @@ See [**this page**](https://docs.spring.io/spring-batch/4.1.x/reference/html/sca
 
 #### 1. Sequential Step Execution Without Scaling
 - Total Time: 8 min 15 sec
-
 - VisualVM Overview 
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FlargeSeq.PNG&version=GBmaster&contentOnly=true&__v=5)
-
 - Step Details on Spring Cloud Data Flow
-
 ![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FstepSeq.PNG&version=GBmaster&contentOnly=true&__v=5)
 
 #### 2. Parallel Steps with Flow Split
