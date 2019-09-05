@@ -1,0 +1,895 @@
+1000,33:38.3,33:38.3,0,1,0,Piano
+1001,33:38.3,33:38.3,0,1,1,24-hour front desk
+1002,33:38.3,33:38.3,0,1,2,24-hour room service
+1003,33:38.3,33:38.3,0,1,3,24-hour security
+1004,33:38.3,33:38.3,0,1,4,Adjoining rooms
+1005,33:38.3,33:38.3,0,1,5,Air conditioning
+1006,33:38.3,33:38.3,0,1,6,Airline desk
+1007,33:38.3,33:38.3,0,1,7,ATM/Cash machine
+1008,33:38.3,33:38.3,0,1,8,Baby sitting
+1009,33:38.3,33:38.3,0,1,9,BBQ/Picnic area
+1010,33:38.3,33:38.3,0,1,10,Bilingual staff
+1011,33:38.3,33:38.3,0,1,11,Bookstore
+1012,33:38.3,33:38.3,0,1,12,Boutiques/stores
+1013,33:38.3,33:38.3,0,1,13,Brailed elevators
+1014,33:38.3,33:38.3,0,1,14,Business library
+1015,33:38.3,33:38.3,0,1,15,Car rental desk
+1016,33:38.3,33:38.3,0,1,16,Casino
+1017,33:38.3,33:38.3,0,1,17,Check cashing policy
+1018,33:38.3,33:38.3,0,1,18,Check-in kiosk
+1019,33:38.3,33:38.3,0,1,19,Cocktail lounge
+1020,33:38.3,33:38.3,0,1,20,Coffee shop
+1021,33:38.3,33:38.3,0,1,21,Coin operated laundry
+1022,33:38.3,33:38.3,0,1,22,Concierge desk
+1023,33:38.3,33:38.3,0,1,23,Concierge floor
+1024,33:38.3,33:38.3,0,1,24,Conference facilities
+1025,33:38.3,33:38.3,0,1,25,Courtyard
+1026,33:38.3,33:38.3,0,1,26,Currency exchange
+1027,33:38.3,33:38.3,0,1,27,Desk with electrical outlet
+1028,33:38.3,33:38.3,0,1,28,Doctor on call
+1029,33:38.3,33:38.3,0,1,29,Door man
+1030,33:38.3,33:38.3,0,1,30,Driving range
+1031,33:38.3,33:38.3,0,1,31,Drugstore/pharmacy
+1032,33:38.3,33:38.3,0,1,32,Duty free shop
+1033,33:38.3,33:38.3,0,1,33,Elevators
+1034,33:38.3,33:38.3,0,1,34,Executive floor
+1035,33:38.3,33:38.3,0,1,35,Exercise gym
+1036,33:38.3,33:38.3,0,1,36,Express check-in
+1037,33:38.3,33:38.3,0,1,37,Express check-out
+1038,33:38.3,33:38.3,0,1,38,Family plan
+1039,33:38.3,33:38.3,0,1,39,Florist
+1040,33:38.3,33:38.3,0,1,40,Folios
+1041,33:38.3,33:38.3,0,1,41,Free airport shuttle
+1042,33:38.3,33:38.3,0,1,42,Free parking
+1043,33:38.3,33:38.3,0,1,43,Free transportation
+1044,33:38.3,33:38.3,0,1,44,Game room
+1045,33:38.3,33:38.3,0,1,45,Gift/News stand
+1046,33:38.3,33:38.3,0,1,46,Hairdresser/barber
+1047,33:38.3,33:38.3,0,1,47,Accessible facilities
+1048,33:38.3,33:38.3,0,1,48,Health club
+1049,33:38.3,33:38.3,0,1,49,Heated pool
+1050,33:38.3,33:38.3,0,1,50,Housekeeping - daily
+1051,33:38.3,33:38.3,0,1,51,Housekeeping - weekly
+1052,33:38.3,33:38.3,0,1,52,Ice machine
+1053,33:38.3,33:38.3,0,1,53,Indoor parking
+1054,33:38.3,33:38.3,0,1,54,Indoor pool
+1055,33:38.3,33:38.3,0,1,55,Jacuzzi
+1056,33:38.3,33:38.3,0,1,56,Jogging track
+1057,33:38.4,33:38.4,0,1,57,Kennels
+1058,33:38.4,33:38.4,0,1,58,Laundry/Valet service
+1059,33:38.4,33:38.4,0,1,59,Liquor store
+1060,33:38.4,33:38.4,0,1,60,Live entertainment
+1061,33:38.4,33:38.4,0,1,61,Massage services
+1062,33:38.4,33:38.4,0,1,62,Nightclub
+1063,33:38.4,33:38.4,0,1,63,Off-Site parking
+1064,33:38.4,33:38.4,0,1,64,On-Site parking
+1065,33:38.4,33:38.4,0,1,65,Outdoor parking
+1066,33:38.4,33:38.4,0,1,66,Outdoor pool
+1067,33:38.4,33:38.4,0,1,67,Package/Parcel services
+1068,33:38.4,33:38.4,0,1,68,Parking
+1069,33:38.4,33:38.4,0,1,69,Photocopy center
+1070,33:38.4,33:38.4,0,1,70,Playground
+1071,33:38.4,33:38.4,0,1,71,Pool
+1072,33:38.4,33:38.4,0,1,72,Poolside snack bar
+1073,33:38.4,33:38.4,0,1,73,Public address system
+1074,33:38.4,33:38.4,0,1,74,Ramp access
+1075,33:38.4,33:38.4,0,1,75,Recreational vehicle parking
+1076,33:38.4,33:38.4,0,1,76,Restaurant
+1077,33:38.4,33:38.4,0,1,77,Room service
+1078,33:38.4,33:38.4,0,1,78,Safe deposit box
+1079,33:38.4,33:38.4,0,1,79,Sauna
+1080,33:38.4,33:38.4,0,1,80,Security
+1081,33:38.4,33:38.4,0,1,81,Shoe shine stand
+1082,33:38.4,33:38.4,0,1,82,Shopping mall
+1083,33:38.4,33:38.4,0,1,83,Solarium
+1084,33:38.4,33:38.4,0,1,84,Spa
+1085,33:38.4,33:38.4,0,1,85,Sports bar
+1086,33:38.4,33:38.4,0,1,86,Steam bath
+1087,33:38.4,33:38.4,0,1,87,Storage space
+1088,33:38.4,33:38.4,0,1,88,Sundry/Convenience store
+1089,33:38.4,33:38.4,0,1,89,Technical concierge
+1090,33:38.4,33:38.4,0,1,90,Theatre desk
+1091,33:38.4,33:38.4,0,1,91,Tour/sightseeing desk
+1092,33:38.4,33:38.4,0,1,92,Translation services
+1093,33:38.4,33:38.4,0,1,93,Travel agency
+1094,33:38.4,33:38.4,0,1,94,Truck parking
+1095,33:38.4,33:38.4,0,1,95,Valet cleaning
+1096,33:38.4,33:38.4,0,1,96,Dry cleaning
+1097,33:38.4,33:38.4,0,1,97,Valet parking
+1098,33:38.4,33:38.4,0,1,98,Vending machines
+1099,33:38.4,33:38.4,0,1,99,Video tapes
+1100,33:38.4,33:38.4,0,1,100,Wakeup service
+1101,33:38.4,33:38.4,0,1,101,Wheelchair access
+1102,33:38.4,33:38.4,0,1,102,Whirlpool
+1103,33:38.4,33:38.4,0,1,103,Multilingual staff
+1104,33:38.4,33:38.4,0,1,104,Wedding services
+1105,33:38.4,33:38.4,0,1,105,Banquet facilities
+1106,33:38.4,33:38.4,0,1,106,Bell staff/porter
+1107,33:38.4,33:38.4,0,1,107,Beauty shop/salon
+1108,33:38.4,33:38.4,0,1,108,Complimentary self service laundry
+1109,33:38.4,33:38.4,0,1,109,Direct dial telephone
+1110,33:38.4,33:38.4,0,1,110,Female traveler room/floor
+1111,33:38.4,33:38.4,0,1,111,Pharmacy
+1112,33:38.4,33:38.4,0,1,112,Stables
+1113,33:38.4,33:38.4,0,1,113,120 AC
+1114,33:38.4,33:38.4,0,1,114,120 DC
+1115,33:38.4,33:38.4,0,1,115,220 AC
+1116,33:38.5,33:38.5,0,1,116,Accessible parking
+1117,33:38.5,33:38.5,0,1,117,220 DC
+1118,33:38.5,33:38.5,0,1,118,Barbeque grills
+1119,33:38.5,33:38.5,0,1,119,Women's clothing
+1120,33:38.5,33:38.5,0,1,120,Men's clothing
+1121,33:38.5,33:38.5,0,1,121,Children's clothing
+1122,33:38.5,33:38.5,0,1,122,Shops and commercial services
+1123,33:38.5,33:38.5,0,1,123,Video games
+1124,33:38.5,33:38.5,0,1,124,Sports bar open for lunch
+1125,33:38.5,33:38.5,0,1,125,Sports bar open for dinner
+1126,33:38.5,33:38.5,0,1,126,Room service - full menu
+1127,33:38.5,33:38.5,0,1,127,Room service - limited menu
+1128,33:38.5,33:38.5,0,1,128,Room service - limited hours
+1129,33:38.5,33:38.5,0,1,129,Valet same day dry cleaning
+1130,33:38.5,33:38.5,0,1,130,Body scrub
+1131,33:38.5,33:38.5,0,1,131,Body wrap
+1132,33:38.5,33:38.5,0,1,132,Public area air conditioned
+1133,33:38.5,33:38.5,0,1,133,Efolio available to company
+1134,33:38.5,33:38.5,0,1,134,Individual Efolio available
+1135,33:38.5,33:38.5,0,1,135,Video review billing
+1136,33:38.5,33:38.5,0,1,136,Butler service
+1137,33:38.5,33:38.5,0,1,137,Complimentary in-room coffee or tea
+1138,33:38.5,33:38.5,0,1,138,Complimentary buffet breakfast
+1139,33:38.5,33:38.5,0,1,139,Complimentary cocktails
+1140,33:38.5,33:38.5,0,1,140,Complimentary coffee in lobby
+1141,33:38.5,33:38.5,0,1,141,Complimentary continental breakfast
+1142,33:38.5,33:38.5,0,1,142,Complimentary full american breakfast
+1143,33:38.5,33:38.5,0,1,143,Dinner delivery service from local restaurant
+1144,33:38.5,33:38.5,0,1,144,Complimentary newspaper delivered to room
+1145,33:38.5,33:38.5,0,1,145,Complimentary newspaper in lobby
+1146,33:38.5,33:38.5,0,1,146,Complimentary shoeshine
+1147,33:38.5,33:38.5,0,1,147,Evening reception
+1148,33:38.5,33:38.5,0,1,148,Front desk
+1149,33:38.5,33:38.5,0,1,149,Grocery shopping service available
+1150,33:38.5,33:38.5,0,1,150,Halal food available
+1151,33:38.5,33:38.5,0,1,151,Kosher food available
+1152,33:38.5,33:38.5,0,1,152,Limousine service
+1153,33:38.5,33:38.5,0,1,153,Managers reception
+1154,33:38.5,33:38.5,0,1,154,Medical Facilities Service
+1155,33:38.5,33:38.5,0,1,155,Telephone jack adaptor available
+1156,33:38.5,33:38.5,0,1,156,All-inclusive meal plan
+1157,33:38.5,33:38.5,0,1,157,Buffet breakfast
+1158,33:38.5,33:38.5,0,1,158,Communal bar area
+1159,33:38.5,33:38.5,0,1,159,Continental breakfast
+1160,33:38.5,33:38.5,0,1,160,Full meal plan
+1161,33:38.5,33:38.5,0,1,161,Full american breakfast
+1162,33:38.5,33:38.5,0,1,162,Meal plan available
+1163,33:38.5,33:38.5,0,1,163,Modified american meal plan
+1164,33:38.5,33:38.5,0,1,164,Food and beverage outlets
+1165,33:38.5,33:38.5,0,1,165,Lounges/bars
+1166,33:38.5,33:38.5,0,1,166,Barber shop
+1167,33:38.5,33:38.5,0,1,167,Video checkout
+1168,33:38.5,33:38.5,0,1,168,Onsite laundry
+1169,33:38.5,33:38.5,0,1,169,24-hour food & beverage kiosk
+1170,33:38.5,33:38.5,0,1,170,Concierge lounge
+1171,33:38.5,33:38.5,0,1,171,Parking fee managed by hotel
+1172,33:38.5,33:38.5,0,1,172,Transportation
+1173,33:38.5,33:38.5,0,1,173,Breakfast served in restaurant
+1174,33:38.5,33:38.5,0,1,174,Lunch served in restaurant
+1175,33:38.6,33:38.6,0,1,175,Dinner served in restaurant
+1176,33:38.6,33:38.6,0,1,176,Full service housekeeping
+1177,33:38.6,33:38.6,0,1,177,Limited service housekeeping
+1178,33:38.6,33:38.6,0,1,178,High speed internet access for laptop in public areas
+1179,33:38.6,33:38.6,0,1,179,Wireless internet connection in public areas
+1180,33:38.6,33:38.6,0,1,180,Additional services/amenities/facilities on property
+1181,33:38.6,33:38.6,0,1,181,Transportation services - local area
+1182,33:38.6,33:38.6,0,1,182,Transportation services - local office
+1183,33:38.6,33:38.6,0,1,183,DVD/video rental
+1184,33:38.6,33:38.6,0,1,184,Parking lot
+1185,33:38.6,33:38.6,0,1,185,Parking deck
+1186,33:38.6,33:38.6,0,1,186,Street side parking
+1187,33:38.6,33:38.6,0,1,187,Cocktail lounge with entertainment
+1188,33:38.6,33:38.6,0,1,188,Cocktail lounge with light fare
+1189,33:38.6,33:38.6,0,1,189,Motorcycle parking
+1190,33:38.6,33:38.6,0,1,190,Phone services
+1191,33:38.6,33:38.6,0,1,191,Ballroom
+1192,33:38.6,33:38.6,0,1,192,Bus parking
+1193,33:38.6,33:38.6,0,1,193,Children's play area
+1194,33:38.6,33:38.6,0,1,194,Children's nursery
+1195,33:38.6,33:38.6,0,1,195,Disco
+1196,33:38.6,33:38.6,0,1,196,Early check-in
+1197,33:38.6,33:38.6,0,1,197,Locker room
+1198,33:38.6,33:38.6,0,1,198,Non-smoking rooms (generic)
+1199,33:38.6,33:38.6,0,1,199,Train access
+1200,33:38.6,33:38.6,0,1,200,Aerobics instruction
+1201,33:38.6,33:38.6,0,1,201,Baggage hold
+1202,33:38.6,33:38.6,0,1,202,Bicycle rentals
+1203,33:38.6,33:38.6,0,1,203,Dietician
+1204,33:38.6,33:38.6,0,1,204,Late check-out available
+1205,33:38.6,33:38.6,0,1,205,Pet-sitting services
+1206,33:38.6,33:38.6,0,1,206,Prayer mats
+1207,33:38.6,33:38.6,0,1,207,Sports trainer
+1208,33:38.6,33:38.6,0,1,208,Turndown service
+1209,33:38.6,33:38.6,0,1,209,DVDs/videos - children
+1210,33:38.6,33:38.6,0,1,210,Bank
+1211,33:38.6,33:38.6,0,1,211,Lobby coffee service
+1212,33:38.6,33:38.6,0,1,212,Banking services
+1213,33:38.6,33:38.6,0,1,213,Stairwells
+1214,33:38.6,33:38.6,0,1,214,Pet amenities available
+1215,33:38.6,33:38.6,0,1,215,Exhibition/convention floor
+1216,33:38.6,33:38.6,0,1,216,Long term parking
+1217,33:38.6,33:38.6,0,1,217,Children not allowed
+1218,33:38.6,33:38.6,0,1,218,Children welcome
+1219,33:38.6,33:38.6,0,1,219,Courtesy car
+1220,33:38.6,33:38.6,0,1,220,Hotel does not provide pornographic films/TV
+1221,33:38.6,33:38.6,0,1,221,Hotspots
+1222,33:38.6,33:38.6,0,1,222,Free high speed internet connection
+1223,33:38.6,33:38.6,0,1,223,Internet services
+1224,33:38.6,33:38.6,0,1,224,Pets allowed
+1225,33:38.6,33:38.6,0,1,225,Gourmet highlights
+1226,33:38.6,33:38.6,0,1,226,Catering services
+1227,33:38.6,33:38.6,0,1,227,Complimentary breakfast
+1228,33:38.6,33:38.6,0,1,228,Business center
+1229,33:38.6,33:38.6,0,1,229,Business services
+1230,33:38.6,33:38.6,0,1,230,Secured parking
+1231,33:38.6,33:38.6,0,1,231,Racquetball
+1232,33:38.6,33:38.6,0,1,232,Snow sports
+1233,33:38.6,33:38.6,0,1,233,Tennis court
+1234,33:38.7,33:38.7,0,1,234,Water sports
+1235,33:38.7,33:38.7,0,1,235,Child programs
+1236,33:38.7,33:38.7,0,1,236,Golf
+1237,33:38.7,33:38.7,0,1,237,Horseback riding
+1238,33:38.7,33:38.7,0,1,238,Oceanfront
+1239,33:38.7,33:38.7,0,1,239,Beachfront
+1240,33:38.7,33:38.7,0,1,240,Hair dryer
+1241,33:38.7,33:38.7,0,1,241,Ironing board
+1242,33:38.7,33:38.7,0,1,242,Heated guest rooms
+1243,33:38.7,33:38.7,0,1,243,Toilet
+1244,33:38.7,33:38.7,0,1,244,Parlor
+1245,33:38.7,33:38.7,0,1,245,Video game player
+1246,33:38.7,33:38.7,0,1,246,Thalassotherapy
+1247,33:38.7,33:38.7,0,1,247,Private dining for groups
+1248,33:38.7,33:38.7,0,1,248,Hearing impaired services
+1249,33:38.7,33:38.7,0,1,249,Carryout breakfast
+1250,33:38.7,33:38.7,0,1,250,Deluxe continental breakfast
+1251,33:38.7,33:38.7,0,1,251,Hot continental breakfast
+1252,33:38.7,33:38.7,0,1,252,Hot breakfast
+1253,33:38.7,33:38.7,0,1,253,Private pool
+1254,33:38.7,33:38.7,0,1,254,Connecting rooms
+1255,33:38.7,33:38.7,0,1,255,Data port
+1256,33:38.7,33:38.7,0,1,256,Exterior corridors
+1257,33:38.7,33:38.7,0,1,257,Gulf view
+1258,33:38.7,33:38.7,0,1,258,Accessible rooms
+1259,33:38.7,33:38.7,0,1,259,High speed internet access
+1260,33:38.7,33:38.7,0,1,260,Interior corridors
+1261,33:38.7,33:38.7,0,1,261,High speed wireless
+1262,33:38.7,33:38.7,0,1,262,Kitchenette
+1263,33:38.7,33:38.7,0,1,263,Private bath or shower
+1264,33:38.7,33:38.7,0,1,264,Fire safety compliant
+1265,33:38.7,33:38.7,0,1,265,Welcome drink
+1266,33:38.7,33:38.7,0,1,266,Boarding pass print-out available
+1267,33:38.7,33:38.7,0,1,267,Printing services available
+1268,33:38.7,33:38.7,0,1,268,All public areas non-smoking
+1269,33:38.7,33:38.7,0,1,269,Meeting rooms
+1270,33:38.7,33:38.7,0,1,270,Movies in room
+1271,33:38.7,33:38.7,0,1,271,Secretarial service
+1272,33:38.7,33:38.7,0,1,272,Snow skiing
+1273,33:38.7,33:38.7,0,1,273,Water skiing
+1274,33:38.7,33:38.7,0,1,274,Fax service
+1275,33:38.7,33:38.7,0,1,275,Great room
+1276,33:38.7,33:38.7,0,1,276,Lobby
+1277,33:38.7,33:38.7,0,1,277,Multiple phone lines billed separately
+1278,33:38.7,33:38.7,0,1,278,Umbrellas
+1279,33:38.7,33:38.7,0,1,279,Gas station
+1280,33:38.7,33:38.7,0,1,280,Grocery store
+1281,33:38.7,33:38.7,0,1,281,24-hour coffee shop
+1282,33:38.7,33:38.7,0,1,282,Airport shuttle service
+1283,33:38.7,33:38.7,0,1,283,Luggage service
+1284,33:38.7,33:38.7,0,1,284,Piano Bar
+1285,33:38.7,33:38.7,0,1,285,VIP security
+1286,33:38.7,33:38.7,0,1,286,Complimentary wireless internet
+1287,33:38.7,33:38.7,0,1,287,Concierge breakfast
+1288,33:38.7,33:38.7,0,1,288,Same gender floor
+1289,33:38.7,33:38.7,0,1,289,Children programs
+1290,33:38.7,33:38.7,0,1,290,"Building meets local, state and country building codes"
+1291,33:38.7,33:38.7,0,1,291,Internet browser On TV
+1292,33:38.7,33:38.7,0,1,292,Newspaper
+1293,33:38.8,33:38.8,0,1,293,Parking - controlled access gates to enter parking area
+1294,33:38.8,33:38.8,0,1,294,Hotel safe deposit box (not room safe box)
+1295,33:38.8,33:38.8,0,1,295,Storage space available - fee
+1296,33:38.8,33:38.8,0,1,296,Type of entrances to guest rooms
+1297,33:38.8,33:38.8,0,1,297,Beverage/cocktail
+1298,33:38.8,33:38.8,0,1,298,Cell phone rental
+1299,33:38.8,33:38.8,0,1,299,Coffee/tea
+1300,33:38.8,33:38.8,0,1,300,Early check in guarantee
+1301,33:38.8,33:38.8,0,1,301,Food and beverage discount
+1302,33:38.8,33:38.8,0,1,302,Late check out guarantee
+1303,33:38.8,33:38.8,0,1,303,Room upgrade confirmed
+1304,33:38.8,33:38.8,0,1,304,Room upgrade on availability
+1305,33:38.8,33:38.8,0,1,305,Shuttle to local businesses
+1306,33:38.8,33:38.8,0,1,306,Shuttle to local attractions
+1307,33:38.8,33:38.8,0,1,307,Social hour
+1308,33:38.8,33:38.8,0,1,308,Video billing
+1309,33:38.8,33:38.8,0,1,309,Welcome gift
+1310,33:38.8,33:38.8,0,1,310,Hypoallergenic rooms
+1311,33:38.8,33:38.8,0,1,311,Room air filtration
+1312,33:38.8,33:38.8,0,1,312,Smoke-free property
+1313,33:38.8,33:38.8,0,1,313,Water purification system in use
+1314,33:38.8,33:38.8,0,1,314,Poolside service
+1315,33:38.8,33:38.8,0,1,315,Clothing store
+1316,33:38.8,33:38.8,0,1,316,Electric car charging stations
+1317,33:38.8,33:38.8,0,1,317,Office rental
+1318,33:38.8,33:38.8,0,1,319,Incoming fax
+1319,33:38.8,33:38.8,0,1,320,Outgoing fax
+1320,33:38.8,33:38.8,0,1,321,Semi-private space
+1321,33:38.8,33:38.8,0,1,322,Loading dock
+1322,33:38.8,33:38.8,0,1,323,Baby kit
+1323,33:38.8,33:38.8,0,1,324,Children's breakfast
+1324,33:38.8,33:38.8,0,1,325,Cloakroom service
+1325,33:38.8,33:38.8,0,1,326,Coffee lounge
+1326,33:38.8,33:38.8,0,1,327,Events ticket service
+1327,33:38.8,33:38.8,0,1,328,Late check-in
+1328,33:38.8,33:38.8,0,1,329,Limited parking
+1329,33:38.8,33:38.8,0,1,330,Outdoor summer bar/caf̩
+1330,33:38.8,33:38.8,0,1,331,No parking available
+1331,33:38.8,33:38.8,0,1,332,Beer garden
+1332,33:38.8,33:38.8,0,1,333,Garden lounge bar
+1333,33:38.8,33:38.8,0,1,334,Summer terrace
+1334,33:38.8,33:38.8,0,1,335,Winter terrace
+1335,33:38.8,33:38.8,0,1,336,Roof terrace
+1336,33:38.8,33:38.8,0,1,337,Beach bar
+1337,33:38.8,33:38.8,0,1,338,Helicopter service
+1338,33:38.8,33:38.8,0,1,339,Ferry
+1339,33:38.8,33:38.8,0,1,340,Tapas bar
+1340,33:38.8,33:38.8,0,1,341,Caf̩ bar
+1341,33:38.8,33:38.8,0,1,342,Snack bar
+1342,33:38.8,33:38.8,0,1,343,Guestroom wired internet
+1343,33:38.8,33:38.8,0,1,344,Guestroom wireless internet
+1344,33:38.8,33:38.8,0,1,345,Fitness center
+1345,33:38.8,33:38.8,0,1,346,Alcoholic beverages
+1346,33:38.8,33:38.8,0,1,347,Non-alcoholic beverages
+1347,33:38.8,33:38.8,0,1,348,Health and beauty services
+1348,33:38.8,33:38.8,0,2,1,Adjoining rooms
+1349,33:38.8,33:38.8,0,2,2,Air conditioning
+1350,33:38.8,33:38.8,0,2,3,Alarm clock
+1351,33:38.8,33:38.8,0,2,4,All news channel
+1352,33:38.8,33:38.8,0,2,5,AM/FM radio
+1353,33:38.9,33:38.9,0,2,6,Baby listening device
+1354,33:38.9,33:38.9,0,2,7,Balcony/Lanai/Terrace
+1355,33:38.9,33:38.9,0,2,8,Barbeque grills
+1356,33:38.9,33:38.9,0,2,9,Bath tub with spray jets
+1357,33:38.9,33:38.9,0,2,10,Bathrobe
+1358,33:38.9,33:38.9,0,2,11,Bathroom amenities
+1359,33:38.9,33:38.9,0,2,12,Bathroom telephone
+1360,33:38.9,33:38.9,0,2,13,Bathtub
+1361,33:38.9,33:38.9,0,2,14,Bathtub only
+1362,33:38.9,33:38.9,0,2,15,Bathtub/shower combination
+1363,33:38.9,33:38.9,0,2,16,Bidet
+1364,33:38.9,33:38.9,0,2,17,Bottled water
+1365,33:38.9,33:38.9,0,2,18,Cable television
+1366,33:38.9,33:38.9,0,2,19,Coffee/Tea maker
+1367,33:38.9,33:38.9,0,2,20,Color television
+1368,33:38.9,33:38.9,0,2,21,Computer
+1369,33:38.9,33:38.9,0,2,22,Connecting rooms
+1370,33:38.9,33:38.9,0,2,23,Converters/ Voltage adaptors
+1371,33:38.9,33:38.9,0,2,24,Copier
+1372,33:38.9,33:38.9,0,2,25,Cordless phone
+1373,33:38.9,33:38.9,0,2,26,Cribs
+1374,33:38.9,33:38.9,0,2,27,Data port
+1375,33:38.9,33:38.9,0,2,28,Desk
+1376,33:38.9,33:38.9,0,2,29,Desk with lamp
+1377,33:38.9,33:38.9,0,2,30,Dining guide
+1378,33:38.9,33:38.9,0,2,31,Direct dial phone number
+1379,33:38.9,33:38.9,0,2,32,Dishwasher
+1380,33:38.9,33:38.9,0,2,33,Double beds
+1381,33:38.9,33:38.9,0,2,34,Dual voltage outlet
+1382,33:38.9,33:38.9,0,2,35,Electrical current voltage
+1383,33:38.9,33:38.9,0,2,36,Ergonomic chair
+1384,33:38.9,33:38.9,0,2,37,Extended phone cord
+1385,33:38.9,33:38.9,0,2,38,Fax machine
+1386,33:38.9,33:38.9,0,2,39,Fire alarm
+1387,33:38.9,33:38.9,0,2,40,Fire alarm with light
+1388,33:38.9,33:38.9,0,2,41,Fireplace
+1389,33:38.9,33:38.9,0,2,42,Free toll free calls
+1390,33:38.9,33:38.9,0,2,43,Free calls
+1391,33:38.9,33:38.9,0,2,44,Free credit card access calls
+1392,33:38.9,33:38.9,0,2,45,Free local calls
+1393,33:38.9,33:38.9,0,2,46,Free movies/video
+1394,33:38.9,33:38.9,0,2,47,Full kitchen
+1395,33:38.9,33:38.9,0,2,48,Grab bars in bathroom
+1396,33:38.9,33:38.9,0,2,49,Grecian tub
+1397,33:38.9,33:38.9,0,2,50,Hairdryer
+1398,33:38.9,33:38.9,0,2,51,High speed internet connection
+1399,33:38.9,33:38.9,0,2,52,Interactive web TV
+1400,33:38.9,33:38.9,0,2,53,International direct dialing
+1401,33:38.9,33:38.9,0,2,54,Internet access
+1402,33:38.9,33:38.9,0,2,55,Iron
+1403,33:38.9,33:38.9,0,2,56,Ironing board
+1404,33:38.9,33:38.9,0,2,57,Jacuzzi
+1405,33:38.9,33:38.9,0,2,58,King bed
+1406,33:38.9,33:38.9,0,2,59,Kitchen
+1407,33:38.9,33:38.9,0,2,60,Kitchen supplies
+1408,33:38.9,33:38.9,0,2,61,Kitchenette
+1409,33:38.9,33:38.9,0,2,62,Knock light
+1410,33:38.9,33:38.9,0,2,63,Laptop
+1411,33:39.0,33:39.0,0,2,64,Large desk
+1412,33:39.0,33:39.0,0,2,65,Large work area
+1413,33:39.0,33:39.0,0,2,66,Laundry basket/clothes hamper
+1414,33:39.0,33:39.0,0,2,67,Loft
+1415,33:39.0,33:39.0,0,2,68,Microwave
+1416,33:39.0,33:39.0,0,2,69,Minibar
+1417,33:39.0,33:39.0,0,2,70,Modem
+1418,33:39.0,33:39.0,0,2,71,Modem jack
+1419,33:39.0,33:39.0,0,2,72,Multi-line phone
+1420,33:39.0,33:39.0,0,2,73,Newspaper
+1421,33:39.0,33:39.0,0,2,74,Non-smoking
+1422,33:39.0,33:39.0,0,2,75,Notepads
+1423,33:39.0,33:39.0,0,2,76,Office supplies
+1424,33:39.0,33:39.0,0,2,77,Oven
+1425,33:39.0,33:39.0,0,2,78,Pay per view movies on TV
+1426,33:39.0,33:39.0,0,2,79,Pens
+1427,33:39.0,33:39.0,0,2,80,Phone in bathroom
+1428,33:39.0,33:39.0,0,2,81,Plates and bowls
+1429,33:39.0,33:39.0,0,2,82,Pots and pans
+1430,33:39.0,33:39.0,0,2,83,Prayer mats
+1431,33:39.0,33:39.0,0,2,84,Printer
+1432,33:39.0,33:39.0,0,2,85,Private bathroom
+1433,33:39.0,33:39.0,0,2,86,Queen bed
+1434,33:39.0,33:39.0,0,2,87,Recliner
+1435,33:39.0,33:39.0,0,2,88,Refrigerator
+1436,33:39.0,33:39.0,0,2,89,Refrigerator with ice maker
+1437,33:39.0,33:39.0,0,2,90,Remote control television
+1438,33:39.0,33:39.0,0,2,91,Rollaway bed
+1439,33:39.0,33:39.0,0,2,92,Safe
+1440,33:39.0,33:39.0,0,2,93,Scanner
+1441,33:39.0,33:39.0,0,2,94,Separate closet
+1442,33:39.0,33:39.0,0,2,95,Separate modem line available
+1443,33:39.0,33:39.0,0,2,96,Shoe polisher
+1444,33:39.0,33:39.0,0,2,97,Shower only
+1445,33:39.0,33:39.0,0,2,98,Silverware/utensils
+1446,33:39.0,33:39.0,0,2,99,Sitting area
+1447,33:39.0,33:39.0,0,2,100,Smoke detectors
+1448,33:39.0,33:39.0,0,2,101,Smoking
+1449,33:39.0,33:39.0,0,2,102,Sofa bed
+1450,33:39.0,33:39.0,0,2,103,Speaker phone
+1451,33:39.0,33:39.0,0,2,104,Stereo
+1452,33:39.0,33:39.0,0,2,105,Stove
+1453,33:39.0,33:39.0,0,2,106,Tape recorder
+1454,33:39.0,33:39.0,0,2,107,Telephone
+1455,33:39.0,33:39.0,0,2,108,Telephone for hearing impaired
+1456,33:39.0,33:39.0,0,2,109,Telephones with message light
+1457,33:39.0,33:39.0,0,2,110,Toaster oven
+1458,33:39.0,33:39.0,0,2,111,Trouser/Pant press
+1459,33:39.0,33:39.0,0,2,112,Turn down service
+1460,33:39.0,33:39.0,0,2,113,Twin bed
+1461,33:39.0,33:39.0,0,2,114,Vaulted ceilings
+1462,33:39.0,33:39.0,0,2,115,VCR movies
+1463,33:39.0,33:39.0,0,2,116,VCR player
+1464,33:39.0,33:39.0,0,2,117,Video games
+1465,33:39.1,33:39.1,0,2,118,Voice mail
+1466,33:39.1,33:39.1,0,2,119,Wake-up calls
+1467,33:39.1,33:39.1,0,2,120,Water closet
+1468,33:39.1,33:39.1,0,2,121,Water purification system
+1469,33:39.1,33:39.1,0,2,122,Wet bar
+1470,33:39.1,33:39.1,0,2,123,Wireless internet connection
+1471,33:39.1,33:39.1,0,2,124,Wireless keyboard
+1472,33:39.1,33:39.1,0,2,125,Adaptor available for telephone PC use
+1473,33:39.1,33:39.1,0,2,126,Air conditioning individually controlled in room
+1474,33:39.1,33:39.1,0,2,127,Bathtub & jacuzzi separate
+1475,33:39.1,33:39.1,0,2,128,Telephone with data ports
+1476,33:39.1,33:39.1,0,2,129,CD player
+1477,33:39.1,33:39.1,0,2,130,Complimentary local calls time limit
+1478,33:39.1,33:39.1,0,2,131,Extra person charge for rollaway use
+1479,33:39.1,33:39.1,0,2,132,Down/feather pillows
+1480,33:39.1,33:39.1,0,2,133,Desk with electrical outlet
+1481,33:39.1,33:39.1,0,2,134,ESPN available
+1482,33:39.1,33:39.1,0,2,135,Foam pillows
+1483,33:39.1,33:39.1,0,2,136,HBO available
+1484,33:39.1,33:39.1,0,2,137,High ceilings
+1485,33:39.1,33:39.1,0,2,138,Marble bathroom
+1486,33:39.1,33:39.1,0,2,139,List of movie channels available
+1487,33:39.1,33:39.1,0,2,140,Pets allowed
+1488,33:39.1,33:39.1,0,2,141,Oversized bathtub
+1489,33:39.1,33:39.1,0,2,142,Shower
+1490,33:39.1,33:39.1,0,2,143,Sink in-room
+1491,33:39.1,33:39.1,0,2,144,Soundproofed room
+1492,33:39.1,33:39.1,0,2,145,Storage space
+1493,33:39.1,33:39.1,0,2,146,Tables and chairs
+1494,33:39.1,33:39.1,0,2,147,Two-line phone
+1495,33:39.1,33:39.1,0,2,148,Walk-in closet
+1496,33:39.1,33:39.1,0,2,149,Washer/dryer
+1497,33:39.1,33:39.1,0,2,150,Weight scale
+1498,33:39.1,33:39.1,0,2,151,Welcome gift
+1499,33:39.1,33:39.1,0,2,152,Spare electrical outlet available at desk
+1500,33:39.1,33:39.1,0,2,153,Non-refundable charge for pets
+1501,33:39.1,33:39.1,0,2,154,Refundable deposit for pets
+1502,33:39.1,33:39.1,0,2,155,Separate tub and shower
+1503,33:39.1,33:39.1,0,2,156,Entrance type to guest room
+1504,33:39.1,33:39.1,0,2,157,Ceiling fan
+1505,33:39.1,33:39.1,0,2,158,CNN available
+1506,33:39.1,33:39.1,0,2,159,Electrical adaptors available
+1507,33:39.1,33:39.1,0,2,160,Buffet breakfast
+1508,33:39.1,33:39.1,0,2,161,Accessible room
+1509,33:39.1,33:39.1,0,2,162,Closets in room
+1510,33:39.1,33:39.1,0,2,163,DVD player
+1511,33:39.1,33:39.1,0,2,164,Mini-refrigerator
+1512,33:39.1,33:39.1,0,2,165,Separate line billing for multi-line phone
+1513,33:39.1,33:39.1,0,2,166,Self-controlled heating/cooling system
+1514,33:39.1,33:39.1,0,2,167,Toaster
+1515,33:39.1,33:39.1,0,2,168,Analog data port
+1516,33:39.1,33:39.1,0,2,169,Collect calls
+1517,33:39.1,33:39.1,0,2,170,International calls
+1518,33:39.1,33:39.1,0,2,171,Carrier access
+1519,33:39.1,33:39.1,0,2,172,Interstate calls
+1520,33:39.1,33:39.1,0,2,173,Intrastate calls
+1521,33:39.2,33:39.2,0,2,174,Local calls
+1522,33:39.2,33:39.2,0,2,175,Long distance calls
+1523,33:39.2,33:39.2,0,2,176,Operator-assisted calls
+1524,33:39.2,33:39.2,0,2,177,Credit card access calls
+1525,33:39.2,33:39.2,0,2,178,Calling card calls
+1526,33:39.2,33:39.2,0,2,179,Toll free calls
+1527,33:39.2,33:39.2,0,2,180,Universal AC/DC adaptors
+1528,33:39.2,33:39.2,0,2,181,Bathtub seat
+1529,33:39.2,33:39.2,0,2,182,Canopy/poster bed
+1530,33:39.2,33:39.2,0,2,183,Cups/glassware
+1531,33:39.2,33:39.2,0,2,184,Entertainment center
+1532,33:39.2,33:39.2,0,2,185,Family/oversized room
+1533,33:39.2,33:39.2,0,2,186,Hypoallergenic bed
+1534,33:39.2,33:39.2,0,2,187,Hypoallergenic pillows
+1535,33:39.2,33:39.2,0,2,188,Lamp
+1536,33:39.2,33:39.2,0,2,189,Meal included - breakfast
+1537,33:39.2,33:39.2,0,2,190,Meal included - continental breakfast
+1538,33:39.2,33:39.2,0,2,191,Meal included - dinner
+1539,33:39.2,33:39.2,0,2,192,Meal included - lunch
+1540,33:39.2,33:39.2,0,2,193,Shared bathroom
+1541,33:39.2,33:39.2,0,2,194,Telephone TDD/Textphone
+1542,33:39.2,33:39.2,0,2,195,Water bed
+1543,33:39.2,33:39.2,0,2,196,Extra adult charge
+1544,33:39.2,33:39.2,0,2,197,Extra child charge
+1545,33:39.2,33:39.2,0,2,198,Extra child charge for rollaway use
+1546,33:39.2,33:39.2,0,2,199,Meal included: full American breakfast
+1547,33:39.2,33:39.2,0,2,200,Futon
+1548,33:39.2,33:39.2,0,2,201,Murphy bed
+1549,33:39.2,33:39.2,0,2,202,Tatami mats
+1550,33:39.2,33:39.2,0,2,203,Single bed
+1551,33:39.2,33:39.2,0,2,204,Annex room
+1552,33:39.2,33:39.2,0,2,205,Free newspaper
+1553,33:39.2,33:39.2,0,2,206,Honeymoon suites
+1554,33:39.2,33:39.2,0,2,207,Complimentary high speed internet in room
+1555,33:39.2,33:39.2,0,2,208,Maid service
+1556,33:39.2,33:39.2,0,2,209,PC hook-up in room
+1557,33:39.2,33:39.2,0,2,210,Satellite television
+1558,33:39.2,33:39.2,0,2,211,VIP rooms
+1559,33:39.2,33:39.2,0,2,212,Cell phone recharger
+1560,33:39.2,33:39.2,0,2,213,DVR player
+1561,33:39.2,33:39.2,0,2,214,iPod docking station
+1562,33:39.2,33:39.2,0,2,215,Media center
+1563,33:39.2,33:39.2,0,2,216,Plug & play panel
+1564,33:39.2,33:39.2,0,2,217,Satellite radio
+1565,33:39.2,33:39.2,0,2,218,Video on demand
+1566,33:39.2,33:39.2,0,2,219,Exterior corridors
+1567,33:39.2,33:39.2,0,2,220,Gulf view
+1568,33:39.2,33:39.2,0,2,221,Accessible room
+1569,33:39.2,33:39.2,0,2,222,Interior corridors
+1570,33:39.2,33:39.2,0,2,223,Mountain view
+1571,33:39.2,33:39.2,0,2,224,Ocean view
+1572,33:39.2,33:39.2,0,2,225,High speed internet access fee
+1573,33:39.2,33:39.2,0,2,226,High speed wireless
+1574,33:39.2,33:39.2,0,2,227,Premium movie channels
+1575,33:39.2,33:39.2,0,2,228,Slippers
+1576,33:39.2,33:39.2,0,2,229,First nighters kit
+1577,33:39.2,33:39.2,0,2,230,Chair provided with desk
+1578,33:39.3,33:39.3,0,2,231,Pillow top mattress
+1579,33:39.3,33:39.3,0,2,232,Feather bed
+1580,33:39.3,33:39.3,0,2,233,Duvet
+1581,33:39.3,33:39.3,0,2,234,Luxury linen type
+1582,33:39.3,33:39.3,0,2,235,International channels
+1583,33:39.3,33:39.3,0,2,236,Pantry
+1584,33:39.3,33:39.3,0,2,237,Dish-cleaning supplies
+1585,33:39.3,33:39.3,0,2,238,Double vanity
+1586,33:39.3,33:39.3,0,2,239,Lighted makeup mirror
+1587,33:39.3,33:39.3,0,2,240,Upgraded bathroom amenities
+1588,33:39.3,33:39.3,0,2,241,VCR player available at front desk
+1589,33:39.3,33:39.3,0,2,242,Instant hot water
+1590,33:39.3,33:39.3,0,2,243,Outdoor space
+1591,33:39.3,33:39.3,0,2,244,Hinoki tub
+1592,33:39.3,33:39.3,0,2,245,Private pool
+1593,33:39.3,33:39.3,0,2,246,High Definition (HD) Flat Panel Television - 32 inches or greater
+1594,33:39.3,33:39.3,0,2,247,Room windows open
+1595,33:39.3,33:39.3,0,2,248,Bedding type unknown or unspecified
+1596,33:39.3,33:39.3,0,2,249,Full bed
+1597,33:39.3,33:39.3,0,2,250,Round bed
+1598,33:39.3,33:39.3,0,2,251,TV
+1599,33:39.3,33:39.3,0,2,252,Child rollaway
+1600,33:39.3,33:39.3,0,2,253,DVD player available at front desk
+1601,33:39.3,33:39.3,0,2,254,Video game player
+1602,33:39.3,33:39.3,0,2,255,Video game player available at front desk
+1603,33:39.3,33:39.3,0,2,256,Dining room seats
+1604,33:39.3,33:39.3,0,2,257,Full size mirror
+1605,33:39.3,33:39.3,0,2,258,Mobile/cellular phones
+1606,33:39.3,33:39.3,0,2,259,Movies
+1607,33:39.3,33:39.3,0,2,260,Multiple closets
+1608,33:39.3,33:39.3,0,2,261,Plates/glassware
+1609,33:39.3,33:39.3,0,2,262,Safe large enough to accommodate a laptop
+1610,33:39.3,33:39.3,0,2,263,Bed linen thread count
+1611,33:39.3,33:39.3,0,2,264,Blackout curtain
+1612,33:39.3,33:39.3,0,2,265,Bluray player
+1613,33:39.3,33:39.3,0,2,266,Device with mp3
+1614,33:39.3,33:39.3,0,2,267,No adult channels or adult channel lock
+1615,33:39.3,33:39.3,0,2,268,Non-allergenic room
+1616,33:39.3,33:39.3,0,2,269,Pillow type
+1617,33:39.3,33:39.3,0,2,270,Seating area with sofa/chair
+1618,33:39.3,33:39.3,0,2,271,Separate toilet area
+1619,33:39.3,33:39.3,0,2,272,Web enabled
+1620,33:39.3,33:39.3,0,2,273,Widescreen TV
+1621,33:39.3,33:39.3,0,2,274,Other data connection
+1622,33:39.3,33:39.3,0,2,275,Phoneline billed separately
+1623,33:39.3,33:39.3,0,2,276,Separate tub or shower
+1624,33:39.3,33:39.3,0,2,277,Video games
+1625,33:39.3,33:39.3,0,2,278,Roof ventilator
+1626,33:39.3,33:39.3,0,2,279,Children's playpen
+1627,33:39.4,33:39.4,0,2,280,Plunge pool
+1628,33:39.4,33:39.4,0,2,281,DVD movies
+1629,33:39.4,33:39.4,0,2,282,Air filtration
+1630,33:39.4,33:39.4,0,3,1,Computer
+1631,33:39.4,33:39.4,0,3,2,Copier
+1632,33:39.4,33:39.4,0,3,3,Cordless phone
+1633,33:39.4,33:39.4,0,3,4,Data port
+1634,33:39.4,33:39.4,0,3,5,Desk
+1635,33:39.4,33:39.4,0,3,6,Direct dial phone number
+1636,33:39.4,33:39.4,0,3,7,Ergonomic chair
+1637,33:39.4,33:39.4,0,3,8,Extended phone cord
+1638,33:39.4,33:39.4,0,3,9,Fax machine
+1639,33:39.4,33:39.4,0,3,10,Free toll free calls
+1640,33:39.4,33:39.4,0,3,11,Free calls
+1641,33:39.4,33:39.4,0,3,12,Free CC access calls
+1642,33:39.4,33:39.4,0,3,13,Free local calls
+1643,33:39.4,33:39.4,0,3,14,High speed internet connection
+1644,33:39.4,33:39.4,0,3,15,Interactive Web TV
+1645,33:39.4,33:39.4,0,3,16,International direct dialing
+1646,33:39.4,33:39.4,0,3,17,Internet access
+1647,33:39.4,33:39.4,0,3,18,Laptop
+1648,33:39.4,33:39.4,0,3,19,Large desk
+1649,33:39.4,33:39.4,0,3,20,Large work area
+1650,33:39.4,33:39.4,0,3,21,Modem
+1651,33:39.4,33:39.4,0,3,22,Modem jack
+1652,33:39.4,33:39.4,0,3,23,Multi-line phone
+1653,33:39.4,33:39.4,0,3,24,Newspaper
+1654,33:39.4,33:39.4,0,3,25,Notepads
+1655,33:39.4,33:39.4,0,3,26,Office supplies
+1656,33:39.4,33:39.4,0,3,27,Pens
+1657,33:39.4,33:39.4,0,3,28,Printer
+1658,33:39.4,33:39.4,0,3,29,Scanner
+1659,33:39.4,33:39.4,0,3,30,Shoe polisher
+1660,33:39.4,33:39.4,0,3,31,Speaker phone
+1661,33:39.4,33:39.4,0,3,32,Tape recorder
+1662,33:39.4,33:39.4,0,3,33,Telephone
+1663,33:39.4,33:39.4,0,3,34,Voicemail
+1664,33:39.4,33:39.4,0,3,35,Wireless internet connection
+1665,33:39.4,33:39.4,0,3,36,Wireless keyboard
+1666,33:39.4,33:39.4,0,3,37,Audio visual equipment
+1667,33:39.4,33:39.4,0,3,38,Blackboard
+1668,33:39.4,33:39.4,0,3,39,Business center
+1669,33:39.4,33:39.4,0,3,40,Cellular phone rental
+1670,33:39.4,33:39.4,0,3,41,Computer rental
+1671,33:39.4,33:39.4,0,3,42,Executive desk
+1672,33:39.4,33:39.4,0,3,43,Flip charts
+1673,33:39.4,33:39.4,0,3,44,Laptop rental
+1674,33:39.4,33:39.4,0,3,45,LCD/Projector
+1675,33:39.4,33:39.4,0,3,46,Meeting/board rooms
+1676,33:39.4,33:39.4,0,3,47,News stand
+1677,33:39.4,33:39.4,0,3,48,Overhead projector
+1678,33:39.4,33:39.4,0,3,49,Secretarial services
+1679,33:39.4,33:39.4,0,3,50,Whiteboard
+1680,33:39.4,33:39.4,0,3,51,Fax machine can print from laptop
+1681,33:39.4,33:39.4,0,3,52,Incoming fax complimentary
+1682,33:39.4,33:39.4,0,3,53,Free fax receipt page limit
+1683,33:39.4,33:39.4,0,3,54,Fee per additional page of incoming fax
+1684,33:39.5,33:39.5,0,3,55,Fee charged for first page
+1685,33:39.5,33:39.5,0,3,56,ISDN
+1686,33:39.5,33:39.5,0,3,57,Network/internet printing available
+1687,33:39.5,33:39.5,0,3,58,Notary public
+1688,33:39.5,33:39.5,0,3,59,Fee per additional page of outgoing fax
+1689,33:39.5,33:39.5,0,3,60,Outgoing fax complimentary
+1690,33:39.5,33:39.5,0,3,61,Fee charged for first page of outgoing fax
+1691,33:39.5,33:39.5,0,3,62,Overnight delivery/pickup
+1692,33:39.5,33:39.5,0,3,63,Pager rental
+1693,33:39.5,33:39.5,0,3,64,Post/parcel service
+1694,33:39.5,33:39.5,0,3,65,Private offices and business services
+1695,33:39.5,33:39.5,0,3,66,Analog - dialup connectivity
+1696,33:39.5,33:39.5,0,3,67,Ethernet connectivity
+1697,33:39.5,33:39.5,0,3,68,Kiosk connectivity
+1698,33:39.5,33:39.5,0,3,69,Wireless connectivity
+1699,33:39.5,33:39.5,0,3,70,Mobile/cellular phone available
+1700,33:39.5,33:39.5,0,3,71,Full business center
+1701,33:39.5,33:39.5,0,3,72,On-site business center
+1702,33:39.5,33:39.5,0,3,73,On-site business center is staffed
+1703,33:39.5,33:39.5,0,3,74,In-room internet appliance
+1704,33:39.5,33:39.5,0,3,75,Analog data port
+1705,33:39.5,33:39.5,0,3,76,Calling card calls
+1706,33:39.5,33:39.5,0,3,77,Carrier access
+1707,33:39.5,33:39.5,0,3,78,Interstate calls
+1708,33:39.5,33:39.5,0,3,79,Intrastate calls
+1709,33:39.5,33:39.5,0,3,80,Local calls
+1710,33:39.5,33:39.5,0,3,81,Long distance calls
+1711,33:39.5,33:39.5,0,3,82,Operator-assisted calls
+1712,33:39.5,33:39.5,0,3,83,VCR/DVD machine rental
+1713,33:39.5,33:39.5,0,3,84,Free operator assisted calls
+1714,33:39.5,33:39.5,0,3,85,Free intrastate calls
+1715,33:39.5,33:39.5,0,3,86,Free interstate calls
+1716,33:39.5,33:39.5,0,3,87,Free international calls
+1717,33:39.5,33:39.5,0,3,88,Free carrier access calls
+1718,33:39.5,33:39.5,0,3,89,Business services
+1719,33:39.5,33:39.5,0,3,90,Toll free calls
+1720,33:39.5,33:39.5,0,3,91,Slide projector
+1721,33:39.5,33:39.5,0,3,92,Ethernet RJ-45 jack
+1722,33:39.5,33:39.5,0,3,93,Free fax transmission page limit
+1723,33:39.5,33:39.5,0,3,94,Conference suite
+1724,33:39.5,33:39.5,0,3,95,Convention centre
+1725,33:39.5,33:39.5,0,3,96,Meeting facilities
+1726,33:39.5,33:39.5,0,3,97,E-mail service
+1727,33:39.5,33:39.5,0,3,98,Other data connections
+1728,33:39.5,33:39.5,0,3,99,Hotel folio breakdown available to credit card company
+1729,33:39.5,33:39.5,0,3,100,Individual folios available via e-mail or web
+1730,33:39.5,33:39.5,0,3,101,Local faxes
+1731,33:39.5,33:39.5,0,3,102,Translation services
+1732,33:39.5,33:39.5,0,4,1,Cross street
+1733,33:39.5,33:39.5,0,4,2,Intersection
+1734,33:39.5,33:39.5,0,4,3,Highway
+1735,33:39.5,33:39.5,0,4,4,Highway exit
+1736,33:39.5,33:39.5,0,4,5,City
+1737,33:39.5,33:39.5,0,4,6,Airport
+1738,33:39.5,33:39.5,0,4,7,Rail station
+1739,33:39.5,33:39.5,0,4,8,Subway station
+1740,33:39.5,33:39.5,0,4,9,Geo location
+1741,33:39.6,33:39.6,0,4,10,Bus/coach station
+1742,33:39.6,33:39.6,0,4,11,Hotel
+1743,33:39.6,33:39.6,0,4,12,Nearest major city
+1744,33:39.6,33:39.6,0,4,13,Surrounding city
+1745,33:39.6,33:39.6,0,4,14,Heliport
+1746,33:39.6,33:39.6,0,4,15,Regional express train station
+1747,33:39.6,33:39.6,0,4,16,Attraction
+1748,33:39.6,33:39.6,0,4,17,Business location
+1749,33:39.6,33:39.6,0,4,18,Car rental location
+1750,33:39.6,33:39.6,0,4,19,Convention center
+1751,33:39.6,33:39.6,0,4,20,Educational
+1752,33:39.6,33:39.6,0,4,21,Event
+1753,33:39.6,33:39.6,0,4,22,Ground transport
+1754,33:39.6,33:39.6,0,4,23,Military bases
+1755,33:39.6,33:39.6,0,4,24,Park/recreational area
+1756,33:39.6,33:39.6,0,4,25,Port
+1757,33:39.6,33:39.6,0,4,26,Resort/ski area
+1758,33:39.6,33:39.6,0,4,27,Shopping center
+1759,33:39.6,33:39.6,0,4,28,Sports
+1760,33:39.6,33:39.6,0,4,29,Transportation points
+1761,33:39.6,33:39.6,0,4,30,Neighbouring state
+1762,33:39.6,33:39.6,0,4,31,Metro area
+1763,33:39.6,33:39.6,0,4,32,District
+1764,33:39.6,33:39.6,0,4,33,Local landmark
+1765,33:39.6,33:39.6,0,5,1,Archery
+1766,33:39.6,33:39.6,0,5,2,Badminton court
+1767,33:39.6,33:39.6,0,5,3,Baseball diamond
+1768,33:39.6,33:39.6,0,5,4,Basketball court
+1769,33:39.6,33:39.6,0,5,5,Beach
+1770,33:39.6,33:39.6,0,5,6,Bike trail
+1771,33:39.6,33:39.6,0,5,7,Boating
+1772,33:39.6,33:39.6,0,5,8,Bocci court
+1773,33:39.6,33:39.6,0,5,9,Bowling alley
+1774,33:39.6,33:39.6,0,5,10,"Children's program, onsite"
+1775,33:39.6,33:39.6,0,5,12,Cricket pitch
+1776,33:39.6,33:39.6,0,5,13,Cross country skiing
+1777,33:39.6,33:39.6,0,5,14,Dart board
+1778,33:39.6,33:39.6,0,5,18,Downhill skiing
+1779,33:39.6,33:39.6,0,5,19,Equipment available in health club
+1780,33:39.6,33:39.6,0,5,20,Fishing
+1781,33:39.6,33:39.6,0,5,21,Fitness center off-site
+1782,33:39.6,33:39.6,0,5,23,Fitness center on-site
+1783,33:39.6,33:39.6,0,5,25,Fly fishing
+1784,33:39.6,33:39.6,0,5,26,Football field
+1785,33:39.6,33:39.6,0,5,27,Golf
+1786,33:39.6,33:39.6,0,5,34,Golf location (onsite/nearby)
+1787,33:39.6,33:39.6,0,5,35,Gym
+1788,33:39.6,33:39.6,0,5,36,Health club
+1789,33:39.6,33:39.6,0,5,60,Hiking trail
+1790,33:39.6,33:39.6,0,5,61,Horseback riding
+1791,33:39.6,33:39.6,0,5,62,Indoor tennis courts
+1792,33:39.6,33:39.6,0,5,63,Jet-ski
+1793,33:39.6,33:39.6,0,5,64,Jogging trail
+1794,33:39.6,33:39.6,0,5,65,Kayaking
+1795,33:39.6,33:39.6,0,5,66,Lake
+1796,33:39.7,33:39.7,0,5,67,Miniature golf
+1797,33:39.7,33:39.7,0,5,68,Mountain biking trail
+1798,33:39.7,33:39.7,0,5,70,Ocean
+1799,33:39.7,33:39.7,0,5,71,Outdoor tennis courts
+1800,33:39.7,33:39.7,0,5,73,Parasailing
+1801,33:39.7,33:39.7,0,5,74,Playground
+1802,33:39.7,33:39.7,0,5,75,Pool
+1803,33:39.7,33:39.7,0,5,76,Putt putt golf
+1804,33:39.7,33:39.7,0,5,77,Racquetball court
+1805,33:39.7,33:39.7,0,5,78,River
+1806,33:39.7,33:39.7,0,5,79,River rafting
+1807,33:39.7,33:39.7,0,5,80,Sailing
+1808,33:39.7,33:39.7,0,5,81,Sauna
+1809,33:39.7,33:39.7,0,5,82,Scuba diving
+1810,33:39.7,33:39.7,0,5,83,Shopping
+1811,33:39.7,33:39.7,0,5,84,Skating rink
+1812,33:39.7,33:39.7,0,5,85,Skeet shooting
+1813,33:39.7,33:39.7,0,5,86,Snorkeling
+1814,33:39.7,33:39.7,0,5,87,Snow boarding
+1815,33:39.7,33:39.7,0,5,88,Snow skiing
+1816,33:39.7,33:39.7,0,5,89,Soccer field
+1817,33:39.7,33:39.7,0,5,90,Solarium
+1818,33:39.7,33:39.7,0,5,91,Spa
+1819,33:39.7,33:39.7,0,5,92,Squash court
+1820,33:39.7,33:39.7,0,5,93,Steam bath
+1821,33:39.7,33:39.7,0,5,94,Tennis court
+1822,33:39.7,33:39.7,0,5,96,Tubing
+1823,33:39.7,33:39.7,0,5,97,Velodrome
+1824,33:39.7,33:39.7,0,5,98,Volleyball
+1825,33:39.7,33:39.7,0,5,99,Water-skiing
+1826,33:39.7,33:39.7,0,5,100,Whirlpool
+1827,33:39.7,33:39.7,0,5,101,Windsurfing
+1828,33:39.7,33:39.7,0,5,102,Driving range
+1829,33:39.7,33:39.7,0,5,103,Camping
+1830,33:39.7,33:39.7,0,5,104,Hot tub
+1831,33:39.7,33:39.7,0,5,105,Hunting
+1832,33:39.7,33:39.7,0,5,106,Indoor/outdoor connecting pool
+1833,33:39.7,33:39.7,0,5,107,Jacuzzi
+1834,33:39.7,33:39.7,0,5,108,Mountain climbing
+1835,33:39.7,33:39.7,0,5,109,Nature preserve trail
+1836,33:39.7,33:39.7,0,5,110,Water activities
+1837,33:39.7,33:39.7,0,5,111,Billiards
+1838,33:39.7,33:39.7,0,5,112,Rock climbing
+1839,33:39.7,33:39.7,0,5,113,Safari
+1840,33:39.7,33:39.7,0,5,114,Sports court onsite
+1841,33:39.7,33:39.7,0,5,115,Sun tanning bed
+1842,33:39.7,33:39.7,0,5,116,Surfing
+1843,33:39.7,33:39.7,0,5,117,Table tennis
+1844,33:39.7,33:39.7,0,5,118,Wine tasting
+1845,33:39.7,33:39.7,0,5,119,Winter sports
+1846,33:39.7,33:39.7,0,5,120,Snow mobiling
+1847,33:39.7,33:39.7,0,5,121,Teen programs
+1848,33:39.7,33:39.7,0,5,122,Indoor pool
+1849,33:39.7,33:39.7,0,5,123,Outdoor pool
+1850,33:39.7,33:39.7,0,5,124,"Children's program, offsite"
+1851,33:39.7,33:39.7,0,5,125,Children's program
+1852,33:39.7,33:39.7,0,5,126,Animal watching
+1853,33:39.7,33:39.7,0,5,127,Bird watching
+1854,33:39.7,33:39.7,0,5,128,Boxing
+1855,33:39.8,33:39.8,0,5,129,Children's pool
+1856,33:39.8,33:39.8,0,5,130,Dancing
+1857,33:39.8,33:39.8,0,5,131,Dog racing
+1858,33:39.8,33:39.8,0,5,132,Fine dining
+1859,33:39.8,33:39.8,0,5,133,Gambling
+1860,33:39.8,33:39.8,0,5,134,Garden
+1861,33:39.8,33:39.8,0,5,135,Helicopter/airplane sightseeing
+1862,33:39.8,33:39.8,0,5,136,Horse racing
+1863,33:39.8,33:39.8,0,5,137,Ice skating
+1864,33:39.8,33:39.8,0,5,138,Karaoke
+1865,33:39.8,33:39.8,0,5,139,Museum/gallery viewing
+1866,33:39.8,33:39.8,0,5,140,Nightclubs
+1867,33:39.8,33:39.8,0,5,141,Polo
+1868,33:39.8,33:39.8,0,5,142,Sightseeing tours
+1869,33:39.8,33:39.8,0,5,143,Sports events
+1870,33:39.8,33:39.8,0,5,144,Skydiving
+1871,33:39.8,33:39.8,0,5,145,Sunbathing
+1872,33:39.8,33:39.8,0,5,146,Theatre
+1873,33:39.8,33:39.8,0,5,147,Weightlifting
+1874,33:39.8,33:39.8,0,5,148,Wrestling
+1875,33:39.8,33:39.8,0,5,149,Canoeing
+1876,33:39.8,33:39.8,0,5,150,Upscale shopping
+1877,33:39.8,33:39.8,0,5,151,Outlet shopping
+1878,33:39.8,33:39.8,0,5,152,Antique shopping
+1879,33:39.8,33:39.8,0,5,153,Cardiovascular exercise
+1880,33:39.8,33:39.8,0,5,154,Bocce court
+1881,33:39.8,33:39.8,0,5,155,Direct access to a beach
+1882,33:39.8,33:39.8,0,5,156,Ski in/out facilities
+1883,33:39.8,33:39.8,0,5,157,Tennis professional
+1884,33:39.8,33:39.8,0,5,158,Extensive health club
+1885,33:39.8,33:39.8,0,5,159,Limited health club
+1886,33:39.8,33:39.8,0,5,160,Diving
+1887,33:39.8,33:39.8,0,5,161,Walking track
+1888,33:39.8,33:39.8,0,5,162,Bike rental
+1889,33:39.8,33:39.8,0,5,163,Paddle court
+1890,33:39.8,33:39.8,0,5,164,Boat tours
+1891,33:39.8,33:39.8,0,5,165,Kids golf academy
+1892,33:39.8,33:39.8,0,5,166,Kids beach club
+1893,33:39.8,33:39.8,0,5,167,Kids equestrian club
+1894,33:39.8,33:39.8,0,5,168,Massage services

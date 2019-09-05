@@ -1,0 +1,223 @@
+{
+	"Envelope": {
+		"Body": {
+			"getHotelContentResponse": {
+				"return": {
+					"Success": {
+						"prefix": "ns2"
+					},
+					"HotelDescriptiveContents": {
+						"HotelDescriptiveContent": {
+							"HotelInfo": {
+								"Descriptions": {
+									"DescriptiveText": {
+										"prefix": "ns2",
+										"text": "Daily Resort Charge"
+									},
+									"prefix": "ns2"
+								},
+								"Position": {
+									"Latitude": "19.928662",
+									"Longitude": "-155.887081",
+									"prefix": "ns2"
+								},
+								"Services": {
+									"Service": {
+										"Code": "228",
+										"CodeDetail": "Meeting Rooms",
+										"ProximityCode": "1",
+										"prefix": "ns2"
+									},
+									"prefix": "ns2"
+								},
+								"HotelStatusCode": "1",
+								"prefix": "ns2"
+							},
+							"FacilityInfo": {
+								"GuestRooms": {
+									"GuestRoom": [
+										{
+											"ID": "ALL",
+											"RoomTypeName": "ALL",
+											"prefix": "ns2"
+										},
+										{
+											"TypeRoom": {
+												"Name": "MAKAI-MTN VW-LAGN TWR-2QNS",
+												"RoomTypeCode": "D2DM",
+												"prefix": "ns2"
+											},
+											"DescriptiveText": {
+												"prefix": "ns2",
+												"text": "MAKAI-MOUNTAIN SIDE-LAGOON TOWER-2 QUEEN BEDS; 45USD RSRT CHG-MOUNTAIN VIEW-PREMIUM ROOM; LANAI-TUB/SHWR COMBO-MINI REFRIG-TWIN VANITY"
+											},
+											"ID": "D2DM",
+											"MaxOccupancy": "4",
+											"RoomTypeName": "MAKAI-MTN VW-LAGN TWR-2QNS",
+											"prefix": "ns2"
+										}
+									],
+									"prefix": "ns2"
+								},
+								"prefix": "ns2"
+							},
+							"Policies": {
+								"Policy": {
+									"PolicyInfo": {
+										"CheckInTime": "16:00",
+										"CheckOutTime": "12:00",
+										"prefix": "ns2"
+									},
+									"prefix": "ns2"
+								},
+								"prefix": "ns2"
+							},
+							"AreaInfo": {
+								"RefPoints": {
+									"RefPoint": {
+										"IndexPointCode": "17",
+										"RefPointName": "Blue Hawaiian Helicoptor Company",
+										"prefix": "ns2"
+									},
+									"prefix": "ns2"
+								},
+								"Recreations": {
+									"Recreation": {
+										"Code": "23",
+										"CodeDetail": "Fitness Center",
+										"Included": "false",
+										"ProximityCode": "1",
+										"prefix": "ns2"
+									},
+									"prefix": "ns2"
+								},
+								"prefix": "ns2"
+							},
+							"AffiliationInfo": {
+								"Awards": {
+									"Award": [
+										{
+											"Rating": "3.5",
+											"prefix": "ns2"
+										},
+										{
+											"Rating": "3",
+											"prefix": "ns2"
+										},
+										{
+											"Rating": "4",
+											"prefix": "ns2"
+										}
+									],
+									"prefix": "ns2"
+								},
+								"prefix": "ns2"
+							},
+							"MultimediaDescriptions": {
+								"MultimediaDescription": [
+									{
+										"AdditionalDetailCode": "4",
+										"prefix": "ns2"
+									},
+									{
+										"ImageItems": {
+											"ImageItem": {
+												"ImageFormat": {
+													"URL": {
+														"prefix": "ns2",
+														"text": "https://media.iceportal.com/59830/photos/64731762S.jpg"
+													},
+													"Height": "50",
+													"Width": "75",
+													"prefix": "ns2"
+												},
+												"Description": {
+													"Caption": "Guest room",
+													"prefix": "ns2"
+												},
+												"Category": "6",
+												"prefix": "ns2"
+											},
+											"prefix": "ns2"
+										},
+										"prefix": "ns2"
+									}
+								],
+								"prefix": "ns2"
+							},
+							"ContactInfos": {
+								"ContactInfo": {
+									"Addresses": {
+										"Address": {
+											"AddressLine": {
+												"prefix": "ns2",
+												"text": "69-425 Waikoloa Beach Drive"
+											},
+											"CityName": {
+												"prefix": "ns2",
+												"text": "Waikoloa"
+											},
+											"PostalCode": {
+												"prefix": "ns2",
+												"text": "96738"
+											},
+											"StateProv": {
+												"StateCode": "HI",
+												"prefix": "ns2",
+												"text": "Hawaii"
+											},
+											"CountryName": {
+												"Code": "US",
+												"prefix": "ns2",
+												"text": "United States"
+											},
+											"prefix": "ns2"
+										},
+										"prefix": "ns2"
+									},
+									"Phones": {
+										"Phone": {
+											"PhoneNumber": "+1-808-886-1234",
+											"PhoneTechType": "1",
+											"prefix": "ns2"
+										},
+										"prefix": "ns2"
+									},
+									"URLs": {
+										"URL": {
+											"prefix": "ns2",
+											"text": "http://www3.hilton.com/en/hotels/hawaii/hilton-waikoloa-village-KOAHWHH/index.html"
+										},
+										"prefix": "ns2"
+									},
+									"prefix": "ns2"
+								},
+								"prefix": "ns2"
+							},
+							"BrandName": "HH",
+							"ChainCode": "HH",
+							"CurrencyCode": "USD",
+							"HotelCityCode": "KOAHWHH",
+							"HotelCode": "code",
+							"HotelCodeContext": "TEST",
+							"HotelName": "Fancy Hotel",
+							"prefix": "ns2"
+						},
+						"prefix": "ns2"
+					},
+					"PrimaryLangID": "EN-US",
+					"Target": "Production",
+					"TimeStamp": "2019-08-21T19:12:52.052-07:00",
+					"Version": "4.0"
+				},
+				"xmlnsns2": "http://www.opentravel.org/OTA/2003/05",
+				"xmlnsns3": "http://hotel.cwctravel.com",
+				"prefix": "ns3"
+			},
+			"prefix": "S"
+		},
+		"xmlnsS": "http://schemas.xmlsoap.org/soap/envelope/",
+		"xmlnsSOAPENV": "http://schemas.xmlsoap.org/soap/envelope/",
+		"prefix": "S"
+	}
+}
