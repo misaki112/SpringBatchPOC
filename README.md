@@ -59,7 +59,10 @@ Here we use ***chunk-oriented step*** pattern, each data importing step consists
 ### **Architecture**  
 ![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/arcflow.PNG)
 
-## **Part 1: Read, process and write data using Spring Batch**
+### **Page Guide**
+[**Spring Batch Large Data Set Scaling**](#Part-2-Working-with-Larger-Data-Set-and-Scaling-Batch-Process)
+
+## **Part 1. Read, process and write data using Spring Batch**
 ### Requirements
 - IDE, Eclipse or Spring Tool Suite(STS)
 - JDK 1.8 or later
@@ -421,7 +424,7 @@ Use ```@Value``` annotation to retrieve the information from execution context i
   ![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/partitioningSequential.PNG)
 - Both using 10 threads, with same amount of data, partitioning takes 3 min 23 sec which is shorter than 3 min 42 sec of using both multi-threading and parallel steps.
 
-## **Part 4: Use Spring Cloud Data Flow to Manage Existing Batch Jobs**
+## **Part 4. Use Spring Cloud Data Flow to Manage Existing Batch Jobs**
 ### **What is Spring Cloud Data Flow?**
 >[**Spring Cloud Data Flow**](https://spring.io/projects/spring-cloud-dataflow) provides tools to create complex topologies for streaming and batch data pipelines. The data pipelines consist of Spring Boot apps, built using the Spring Cloud Stream or Spring Cloud Task microservice frameworks.
 
