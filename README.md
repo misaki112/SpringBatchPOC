@@ -33,7 +33,7 @@ Here we use ***chunk-oriented step*** pattern, each data importing step consists
 - **Writer** takes in the output java object from Processor, transform the Object to output source.  
 
 ***Example of a chunk oriented step which imports data from a csv file*** 
-![text](https://trhqprdtfs01.pacific.costcotravel.com/tfs/CostcoTravel/e9f00e8f-7718-4c76-88ee-5a50949b2641/b22825d8-5219-46d6-a117-9feb3450e982/_api/_versioncontrol/itemContent?repositoryId=f2f525b1-2dea-421a-bb02-dc7ad5c9d897&path=%2Fimages%2FCapture.PNG&version=GBmaster&contentOnly=true&__v=5)
+![text](https://github.com/misaki112/SpringBatchPOC/blob/master/images/Capture.PNG)
 
 # **Proof of Concept**
 ## **Overview**  
